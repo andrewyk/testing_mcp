@@ -1,0 +1,199 @@
+[
+  {
+    "id": "ee9cce32-f437-4c87-9bec-1061c4b8854c",
+    "skill_name": "test_skill",
+    "skill_type": "1p",
+    "timestamp": "2025-08-08T19:46:21.412089",
+    "duration_ms": 100.0,
+    "success": true,
+    "input_size": 0,
+    "output_size": 0,
+    "error_message": null,
+    "metadata": {}
+  },
+  {
+    "id": "32da816c-c8b3-4bfb-8fa6-7a2f6a9bb547",
+    "skill_name": "text_processing",
+    "skill_type": "1p",
+    "timestamp": "2025-08-08T19:46:39.713318",
+    "duration_ms": 128.86311890057283,
+    "success": true,
+    "input_size": 460,
+    "output_size": 916,
+    "error_message": null,
+    "metadata": {
+      "execution_context": "local",
+      "resource_usage": "low"
+    }
+  },
+  {
+    "id": "18daed02-a2cd-430e-ad65-b7b0dbff0291",
+    "skill_name": "third_party_tools",
+    "skill_type": "mcp",
+    "timestamp": "2025-08-08T19:46:41.012808",
+    "duration_ms": 1298.8842405309558,
+    "success": true,
+    "input_size": 3192,
+    "output_size": 9906,
+    "error_message": null,
+    "metadata": {
+      "execution_context": "external",
+      "mcp_server": "server-2",
+      "network_latency_ms": 154.1659297545345
+    }
+  },
+  {
+    "id": "8f2a6245-a282-467e-ae63-ae95739bdb7d",
+    "skill_name": "external_api_integration",
+    "skill_type": "mcp",
+    "timestamp": "2025-08-08T19:46:42.617128",
+    "duration_ms": 1503.418252314378,
+    "success": true,
+    "input_size": 1045,
+    "output_size": 7315,
+    "error_message": null,
+    "metadata": {
+      "execution_context": "external",
+      "mcp_server": "server-2",
+      "network_latency_ms": 218.92900523452568
+    }
+  },
+  {
+    "id": "e62581e8-971b-49c4-916a-f34e7c106f89",
+    "skill_name": "code_generation",
+    "skill_type": "1p",
+    "timestamp": "2025-08-08T19:46:42.882497",
+    "duration_ms": 164.56623662529546,
+    "success": true,
+    "input_size": 991,
+    "output_size": 834,
+    "error_message": null,
+    "metadata": {
+      "execution_context": "local",
+      "resource_usage": "low"
+    }
+  },
+  {
+    "id": "ffd9120a-094b-4132-9e37-4f316c776f15",
+    "skill_name": "text_processing",
+    "skill_type": "1p",
+    "timestamp": "2025-08-08T19:46:43.053356",
+    "duration_ms": 70.06459039466148,
+    "success": true,
+    "input_size": 837,
+    "output_size": 661,
+    "error_message": null,
+    "metadata": {
+      "execution_context": "local",
+      "resource_usage": "low"
+    }
+  },
+  {
+    "id": "0d56cd7e-7e98-498d-9f4c-aefe5e1a52a5",
+    "skill_name": "data_analysis",
+    "skill_type": "1p",
+    "timestamp": "2025-08-08T19:46:43.237543",
+    "duration_ms": 83.37456437596455,
+    "success": true,
+    "input_size": 379,
+    "output_size": 1557,
+    "error_message": null,
+    "metadata": {
+      "execution_context": "local",
+      "resource_usage": "low"
+    }
+  },
+  {
+    "id": "09194642-1766-4fec-ac2a-3a11606c0a90",
+    "skill_name": "external_api_integration",
+    "skill_type": "mcp",
+    "timestamp": "2025-08-08T19:46:44.881431",
+    "duration_ms": 1542.9490444648654,
+    "success": true,
+    "input_size": 2814,
+    "output_size": 2998,
+    "error_message": null,
+    "metadata": {
+      "execution_context": "external",
+      "mcp_server": "server-2",
+      "network_latency_ms": 382.4575769928761
+    }
+  },
+  {
+    "id": "4731ff36-5ff7-46ab-a87a-95235bb5603d",
+    "skill_name": "file_operations",
+    "skill_type": "1p",
+    "timestamp": "2025-08-08T19:46:45.078190",
+    "duration_ms": 95.90067738175864,
+    "success": true,
+    "input_size": 214,
+    "output_size": 1446,
+    "error_message": null,
+    "metadata": {
+      "execution_context": "local",
+      "resource_usage": "low"
+    }
+  },
+  {
+    "id": "9faa5cc6-5dc4-4d91-8582-14fa02e3e332",
+    "skill_name": "database_query",
+    "skill_type": "mcp",
+    "timestamp": "2025-08-08T19:46:47.026762",
+    "duration_ms": 1847.6167594178378,
+    "success": true,
+    "input_size": 4134,
+    "output_size": 9131,
+    "error_message": null,
+    "metadata": {
+      "execution_context": "external",
+      "mcp_server": "server-3",
+      "network_latency_ms": 403.2851891065039
+    }
+  },
+  {
+    "id": "be4216bf-9b26-460b-9173-41abc6bcab74",
+    "skill_name": "code_generation",
+    "skill_type": "1p",
+    "timestamp": "2025-08-08T19:46:47.196446",
+    "duration_ms": 68.67102407693636,
+    "success": true,
+    "input_size": 715,
+    "output_size": 1782,
+    "error_message": null,
+    "metadata": {
+      "execution_context": "local",
+      "resource_usage": "low"
+    }
+  },
+  {
+    "id": "1a854f76-8ee9-4c08-9c3f-f4f63a430808",
+    "skill_name": "code_generation",
+    "skill_type": "1p",
+    "timestamp": "2025-08-08T19:46:47.454075",
+    "duration_ms": 156.6092263713664,
+    "success": true,
+    "input_size": 607,
+    "output_size": 1804,
+    "error_message": null,
+    "metadata": {
+      "execution_context": "local",
+      "resource_usage": "low"
+    }
+  },
+  {
+    "id": "d724ba23-7137-40c8-a1e4-d0cb707e45cb",
+    "skill_name": "database_query",
+    "skill_type": "mcp",
+    "timestamp": "2025-08-08T19:46:48.527410",
+    "duration_ms": 1072.4782590488576,
+    "success": true,
+    "input_size": 3525,
+    "output_size": 2463,
+    "error_message": null,
+    "metadata": {
+      "execution_context": "external",
+      "mcp_server": "server-3",
+      "network_latency_ms": 110.35281267609464
+    }
+  }
+]

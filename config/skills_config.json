@@ -1,0 +1,37 @@
+{
+  "retention_days": 30,
+  "enable_detailed_logging": true,
+  "performance_thresholds": {
+    "slow_threshold_ms": 1000,
+    "error_rate_threshold": 0.1
+  },
+  "skills_registry": {
+    "1p_skills": [
+      "file_operations",
+      "text_processing",
+      "data_analysis", 
+      "code_generation",
+      "web_scraping",
+      "api_calls"
+    ],
+    "mcp_skills": [
+      "database_query",
+      "external_api_integration",
+      "cloud_storage_access",
+      "third_party_tools",
+      "custom_connectors",
+      "enterprise_systems"
+    ]
+  },
+  "comparison_metrics": {
+    "track_latency": true,
+    "track_success_rate": true,
+    "track_data_volume": true,
+    "track_resource_usage": false
+  },
+  "alerting": {
+    "enable_alerts": true,
+    "performance_degradation_threshold": 0.2,
+    "error_spike_threshold": 0.15
+  }
+}
