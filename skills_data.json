@@ -195,5 +195,1589 @@
       "mcp_server": "server-3",
       "network_latency_ms": 110.35281267609464
     }
+  },
+  {
+    "id": "782a6947-7409-4f0a-a5fa-a82a25c4253f",
+    "skill_name": "benchmark_1p",
+    "skill_type": "1p",
+    "timestamp": "2025-08-08T19:49:53.026547",
+    "duration_ms": 88.52950719201488,
+    "success": true,
+    "input_size": 1000,
+    "output_size": 2000,
+    "error_message": null,
+    "metadata": {
+      "benchmark": true,
+      "iteration": 0
+    }
+  },
+  {
+    "id": "bb9294b9-ef7c-49f1-9953-8774280f6dd9",
+    "skill_name": "benchmark_1p",
+    "skill_type": "1p",
+    "timestamp": "2025-08-08T19:49:53.026999",
+    "duration_ms": 144.3073851644284,
+    "success": true,
+    "input_size": 1000,
+    "output_size": 2000,
+    "error_message": null,
+    "metadata": {
+      "benchmark": true,
+      "iteration": 1
+    }
+  },
+  {
+    "id": "a9a7880f-b3e2-4a28-a73b-72ef894be98f",
+    "skill_name": "benchmark_1p",
+    "skill_type": "1p",
+    "timestamp": "2025-08-08T19:49:53.027484",
+    "duration_ms": 77.2743001779134,
+    "success": true,
+    "input_size": 1000,
+    "output_size": 2000,
+    "error_message": null,
+    "metadata": {
+      "benchmark": true,
+      "iteration": 2
+    }
+  },
+  {
+    "id": "f4a9241b-0caf-419b-9333-5f2103a034d3",
+    "skill_name": "benchmark_1p",
+    "skill_type": "1p",
+    "timestamp": "2025-08-08T19:49:53.027950",
+    "duration_ms": 104.57691397847307,
+    "success": true,
+    "input_size": 1000,
+    "output_size": 2000,
+    "error_message": null,
+    "metadata": {
+      "benchmark": true,
+      "iteration": 3
+    }
+  },
+  {
+    "id": "d4fa6936-7405-4082-8e4c-82db4c425b60",
+    "skill_name": "benchmark_1p",
+    "skill_type": "1p",
+    "timestamp": "2025-08-08T19:49:53.028402",
+    "duration_ms": 117.7175979803146,
+    "success": true,
+    "input_size": 1000,
+    "output_size": 2000,
+    "error_message": null,
+    "metadata": {
+      "benchmark": true,
+      "iteration": 4
+    }
+  },
+  {
+    "id": "ca6da3b6-8fca-4678-9a41-d08ef1cc71a1",
+    "skill_name": "benchmark_1p",
+    "skill_type": "1p",
+    "timestamp": "2025-08-08T19:49:53.028919",
+    "duration_ms": 72.34786409956911,
+    "success": true,
+    "input_size": 1000,
+    "output_size": 2000,
+    "error_message": null,
+    "metadata": {
+      "benchmark": true,
+      "iteration": 5
+    }
+  },
+  {
+    "id": "23780d7c-7c20-4ba6-975c-7064943eb8de",
+    "skill_name": "benchmark_1p",
+    "skill_type": "1p",
+    "timestamp": "2025-08-08T19:49:53.029493",
+    "duration_ms": 89.74054380317453,
+    "success": true,
+    "input_size": 1000,
+    "output_size": 2000,
+    "error_message": null,
+    "metadata": {
+      "benchmark": true,
+      "iteration": 6
+    }
+  },
+  {
+    "id": "00b0fc6d-2da3-42df-893d-2eeea2bbe0f3",
+    "skill_name": "benchmark_1p",
+    "skill_type": "1p",
+    "timestamp": "2025-08-08T19:49:53.029991",
+    "duration_ms": 109.27032226220058,
+    "success": true,
+    "input_size": 1000,
+    "output_size": 2000,
+    "error_message": null,
+    "metadata": {
+      "benchmark": true,
+      "iteration": 7
+    }
+  },
+  {
+    "id": "4d56f877-ec14-4181-beb3-5093e482499a",
+    "skill_name": "benchmark_1p",
+    "skill_type": "1p",
+    "timestamp": "2025-08-08T19:49:53.030508",
+    "duration_ms": 114.89633683715309,
+    "success": true,
+    "input_size": 1000,
+    "output_size": 2000,
+    "error_message": null,
+    "metadata": {
+      "benchmark": true,
+      "iteration": 8
+    }
+  },
+  {
+    "id": "884a169a-fdc8-4ed7-ba5a-db5c46060c97",
+    "skill_name": "benchmark_1p",
+    "skill_type": "1p",
+    "timestamp": "2025-08-08T19:49:53.031018",
+    "duration_ms": 81.93803130723909,
+    "success": true,
+    "input_size": 1000,
+    "output_size": 2000,
+    "error_message": null,
+    "metadata": {
+      "benchmark": true,
+      "iteration": 9
+    }
+  },
+  {
+    "id": "54a67aa2-dd54-4fe9-bb9c-4530da5e0fe2",
+    "skill_name": "benchmark_1p",
+    "skill_type": "1p",
+    "timestamp": "2025-08-08T19:49:53.031553",
+    "duration_ms": 83.81410500890449,
+    "success": true,
+    "input_size": 1000,
+    "output_size": 2000,
+    "error_message": null,
+    "metadata": {
+      "benchmark": true,
+      "iteration": 10
+    }
+  },
+  {
+    "id": "b3b3e940-5b4f-420b-8b39-3318d280058f",
+    "skill_name": "benchmark_1p",
+    "skill_type": "1p",
+    "timestamp": "2025-08-08T19:49:53.032082",
+    "duration_ms": 120.99172238348612,
+    "success": true,
+    "input_size": 1000,
+    "output_size": 2000,
+    "error_message": null,
+    "metadata": {
+      "benchmark": true,
+      "iteration": 11
+    }
+  },
+  {
+    "id": "842dabdb-a1fa-4b74-9a89-8ac30336cf25",
+    "skill_name": "benchmark_1p",
+    "skill_type": "1p",
+    "timestamp": "2025-08-08T19:49:53.032741",
+    "duration_ms": 90.16620191732734,
+    "success": true,
+    "input_size": 1000,
+    "output_size": 2000,
+    "error_message": null,
+    "metadata": {
+      "benchmark": true,
+      "iteration": 12
+    }
+  },
+  {
+    "id": "90d903fa-37dc-48db-baef-0228084dc9e5",
+    "skill_name": "benchmark_1p",
+    "skill_type": "1p",
+    "timestamp": "2025-08-08T19:49:53.033331",
+    "duration_ms": 84.68166859961327,
+    "success": true,
+    "input_size": 1000,
+    "output_size": 2000,
+    "error_message": null,
+    "metadata": {
+      "benchmark": true,
+      "iteration": 13
+    }
+  },
+  {
+    "id": "25687d29-ce23-4098-8058-67b93827ca30",
+    "skill_name": "benchmark_1p",
+    "skill_type": "1p",
+    "timestamp": "2025-08-08T19:49:53.034041",
+    "duration_ms": 96.69098975124867,
+    "success": true,
+    "input_size": 1000,
+    "output_size": 2000,
+    "error_message": null,
+    "metadata": {
+      "benchmark": true,
+      "iteration": 14
+    }
+  },
+  {
+    "id": "2a757315-c492-4df8-b89c-c5bd9933867a",
+    "skill_name": "benchmark_1p",
+    "skill_type": "1p",
+    "timestamp": "2025-08-08T19:49:53.034674",
+    "duration_ms": 116.93656293140714,
+    "success": true,
+    "input_size": 1000,
+    "output_size": 2000,
+    "error_message": null,
+    "metadata": {
+      "benchmark": true,
+      "iteration": 15
+    }
+  },
+  {
+    "id": "ff6eb821-d49e-4cae-a125-45ce5f1f9b2d",
+    "skill_name": "benchmark_1p",
+    "skill_type": "1p",
+    "timestamp": "2025-08-08T19:49:53.035303",
+    "duration_ms": 101.85468222600338,
+    "success": true,
+    "input_size": 1000,
+    "output_size": 2000,
+    "error_message": null,
+    "metadata": {
+      "benchmark": true,
+      "iteration": 16
+    }
+  },
+  {
+    "id": "17cf91db-1a02-4eb8-8c38-f67e1137f1e1",
+    "skill_name": "benchmark_1p",
+    "skill_type": "1p",
+    "timestamp": "2025-08-08T19:49:53.036363",
+    "duration_ms": 126.5411119204503,
+    "success": true,
+    "input_size": 1000,
+    "output_size": 2000,
+    "error_message": null,
+    "metadata": {
+      "benchmark": true,
+      "iteration": 17
+    }
+  },
+  {
+    "id": "3c3cdeb6-b380-4636-b83a-95056adbdf6e",
+    "skill_name": "benchmark_1p",
+    "skill_type": "1p",
+    "timestamp": "2025-08-08T19:49:53.037008",
+    "duration_ms": 97.4333408809512,
+    "success": true,
+    "input_size": 1000,
+    "output_size": 2000,
+    "error_message": null,
+    "metadata": {
+      "benchmark": true,
+      "iteration": 18
+    }
+  },
+  {
+    "id": "a0f9fc1d-7e83-4f0a-b689-ee097d18ecc6",
+    "skill_name": "benchmark_1p",
+    "skill_type": "1p",
+    "timestamp": "2025-08-08T19:49:53.037674",
+    "duration_ms": 98.61351109589863,
+    "success": true,
+    "input_size": 1000,
+    "output_size": 2000,
+    "error_message": null,
+    "metadata": {
+      "benchmark": true,
+      "iteration": 19
+    }
+  },
+  {
+    "id": "8a56c177-92e3-4135-8b0e-d423683bf503",
+    "skill_name": "benchmark_1p",
+    "skill_type": "1p",
+    "timestamp": "2025-08-08T19:49:53.038400",
+    "duration_ms": 127.51899479826788,
+    "success": true,
+    "input_size": 1000,
+    "output_size": 2000,
+    "error_message": null,
+    "metadata": {
+      "benchmark": true,
+      "iteration": 20
+    }
+  },
+  {
+    "id": "4ea40c03-00f3-45a9-9e2e-3b93c630a554",
+    "skill_name": "benchmark_1p",
+    "skill_type": "1p",
+    "timestamp": "2025-08-08T19:49:53.039085",
+    "duration_ms": 78.56453685292571,
+    "success": true,
+    "input_size": 1000,
+    "output_size": 2000,
+    "error_message": null,
+    "metadata": {
+      "benchmark": true,
+      "iteration": 21
+    }
+  },
+  {
+    "id": "75bb8f36-e4bc-4953-886b-5d6fe5e0d895",
+    "skill_name": "benchmark_1p",
+    "skill_type": "1p",
+    "timestamp": "2025-08-08T19:49:53.039784",
+    "duration_ms": 127.79292114038776,
+    "success": true,
+    "input_size": 1000,
+    "output_size": 2000,
+    "error_message": null,
+    "metadata": {
+      "benchmark": true,
+      "iteration": 22
+    }
+  },
+  {
+    "id": "7bb4e28a-14a9-4850-9ae6-ceb8580e8c42",
+    "skill_name": "benchmark_1p",
+    "skill_type": "1p",
+    "timestamp": "2025-08-08T19:49:53.040511",
+    "duration_ms": 112.12668310282115,
+    "success": true,
+    "input_size": 1000,
+    "output_size": 2000,
+    "error_message": null,
+    "metadata": {
+      "benchmark": true,
+      "iteration": 23
+    }
+  },
+  {
+    "id": "a86bc1f4-6cb7-4626-8fd5-56524dda0089",
+    "skill_name": "benchmark_1p",
+    "skill_type": "1p",
+    "timestamp": "2025-08-08T19:49:53.041317",
+    "duration_ms": 112.75024532111681,
+    "success": true,
+    "input_size": 1000,
+    "output_size": 2000,
+    "error_message": null,
+    "metadata": {
+      "benchmark": true,
+      "iteration": 24
+    }
+  },
+  {
+    "id": "c47c6f17-dc65-4924-8d91-dafc50468037",
+    "skill_name": "benchmark_1p",
+    "skill_type": "1p",
+    "timestamp": "2025-08-08T19:49:53.042052",
+    "duration_ms": 99.04163018039877,
+    "success": true,
+    "input_size": 1000,
+    "output_size": 2000,
+    "error_message": null,
+    "metadata": {
+      "benchmark": true,
+      "iteration": 25
+    }
+  },
+  {
+    "id": "b4840d41-c829-4de5-9b80-52a1534b76f6",
+    "skill_name": "benchmark_1p",
+    "skill_type": "1p",
+    "timestamp": "2025-08-08T19:49:53.042812",
+    "duration_ms": 88.68678643224573,
+    "success": true,
+    "input_size": 1000,
+    "output_size": 2000,
+    "error_message": null,
+    "metadata": {
+      "benchmark": true,
+      "iteration": 26
+    }
+  },
+  {
+    "id": "f24ae505-1c0b-41b7-af28-dd55e099ef03",
+    "skill_name": "benchmark_1p",
+    "skill_type": "1p",
+    "timestamp": "2025-08-08T19:49:53.043587",
+    "duration_ms": 94.98264029782914,
+    "success": true,
+    "input_size": 1000,
+    "output_size": 2000,
+    "error_message": null,
+    "metadata": {
+      "benchmark": true,
+      "iteration": 27
+    }
+  },
+  {
+    "id": "a1f3511d-13fa-462e-80b8-e575343b6723",
+    "skill_name": "benchmark_1p",
+    "skill_type": "1p",
+    "timestamp": "2025-08-08T19:49:53.044462",
+    "duration_ms": 101.4320359634795,
+    "success": true,
+    "input_size": 1000,
+    "output_size": 2000,
+    "error_message": null,
+    "metadata": {
+      "benchmark": true,
+      "iteration": 28
+    }
+  },
+  {
+    "id": "0a9ec1e2-2862-4543-9c32-b5e60d51d309",
+    "skill_name": "benchmark_1p",
+    "skill_type": "1p",
+    "timestamp": "2025-08-08T19:49:53.045272",
+    "duration_ms": 122.89068054148095,
+    "success": true,
+    "input_size": 1000,
+    "output_size": 2000,
+    "error_message": null,
+    "metadata": {
+      "benchmark": true,
+      "iteration": 29
+    }
+  },
+  {
+    "id": "0ccc3877-b9be-46b5-86e9-2d2aa9497db2",
+    "skill_name": "benchmark_mcp",
+    "skill_type": "mcp",
+    "timestamp": "2025-08-08T19:49:53.046084",
+    "duration_ms": 394.3545425430543,
+    "success": true,
+    "input_size": 1000,
+    "output_size": 2000,
+    "error_message": null,
+    "metadata": {
+      "benchmark": true,
+      "iteration": 0
+    }
+  },
+  {
+    "id": "5eff5b33-edc8-4b1c-a395-602e1511f7b2",
+    "skill_name": "benchmark_mcp",
+    "skill_type": "mcp",
+    "timestamp": "2025-08-08T19:49:53.046925",
+    "duration_ms": 373.7628514267015,
+    "success": true,
+    "input_size": 1000,
+    "output_size": 2000,
+    "error_message": null,
+    "metadata": {
+      "benchmark": true,
+      "iteration": 1
+    }
+  },
+  {
+    "id": "1a35c6c1-345f-4e9a-aca8-89fc2047ec80",
+    "skill_name": "benchmark_mcp",
+    "skill_type": "mcp",
+    "timestamp": "2025-08-08T19:49:53.047791",
+    "duration_ms": 1939.4786177841368,
+    "success": true,
+    "input_size": 1000,
+    "output_size": 2000,
+    "error_message": null,
+    "metadata": {
+      "benchmark": true,
+      "iteration": 2
+    }
+  },
+  {
+    "id": "760a05a8-b8b9-4d56-b878-cc9de4f85546",
+    "skill_name": "benchmark_mcp",
+    "skill_type": "mcp",
+    "timestamp": "2025-08-08T19:49:53.048672",
+    "duration_ms": 456.3206009503662,
+    "success": true,
+    "input_size": 1000,
+    "output_size": 2000,
+    "error_message": null,
+    "metadata": {
+      "benchmark": true,
+      "iteration": 3
+    }
+  },
+  {
+    "id": "0c8f8f87-e4f3-4972-824e-f4811178fb5e",
+    "skill_name": "benchmark_mcp",
+    "skill_type": "mcp",
+    "timestamp": "2025-08-08T19:49:53.049556",
+    "duration_ms": 373.8434184705635,
+    "success": true,
+    "input_size": 1000,
+    "output_size": 2000,
+    "error_message": null,
+    "metadata": {
+      "benchmark": true,
+      "iteration": 4
+    }
+  },
+  {
+    "id": "cc6e375b-802b-46cc-b05b-6e34b129b93f",
+    "skill_name": "benchmark_mcp",
+    "skill_type": "mcp",
+    "timestamp": "2025-08-08T19:49:53.050466",
+    "duration_ms": 375.9903497335208,
+    "success": true,
+    "input_size": 1000,
+    "output_size": 2000,
+    "error_message": null,
+    "metadata": {
+      "benchmark": true,
+      "iteration": 5
+    }
+  },
+  {
+    "id": "4a3f0fbe-fc10-460e-9768-edb2b3f27f87",
+    "skill_name": "benchmark_mcp",
+    "skill_type": "mcp",
+    "timestamp": "2025-08-08T19:49:53.051382",
+    "duration_ms": 445.61673482537253,
+    "success": true,
+    "input_size": 1000,
+    "output_size": 2000,
+    "error_message": null,
+    "metadata": {
+      "benchmark": true,
+      "iteration": 6
+    }
+  },
+  {
+    "id": "c86cbb31-f799-4463-8d97-25523511323f",
+    "skill_name": "benchmark_mcp",
+    "skill_type": "mcp",
+    "timestamp": "2025-08-08T19:49:53.052322",
+    "duration_ms": 467.02158155597584,
+    "success": true,
+    "input_size": 1000,
+    "output_size": 2000,
+    "error_message": null,
+    "metadata": {
+      "benchmark": true,
+      "iteration": 7
+    }
+  },
+  {
+    "id": "fc7cc034-1125-402b-ac89-02d9275f8332",
+    "skill_name": "benchmark_mcp",
+    "skill_type": "mcp",
+    "timestamp": "2025-08-08T19:49:53.053273",
+    "duration_ms": 2883.150376928461,
+    "success": true,
+    "input_size": 1000,
+    "output_size": 2000,
+    "error_message": null,
+    "metadata": {
+      "benchmark": true,
+      "iteration": 8
+    }
+  },
+  {
+    "id": "6b812a5e-dae8-4e8b-a842-2aefc93e3a80",
+    "skill_name": "benchmark_mcp",
+    "skill_type": "mcp",
+    "timestamp": "2025-08-08T19:49:53.054243",
+    "duration_ms": 317.4629234266701,
+    "success": true,
+    "input_size": 1000,
+    "output_size": 2000,
+    "error_message": null,
+    "metadata": {
+      "benchmark": true,
+      "iteration": 9
+    }
+  },
+  {
+    "id": "27d93ef1-5649-42da-946c-1f676e1f0fbf",
+    "skill_name": "benchmark_mcp",
+    "skill_type": "mcp",
+    "timestamp": "2025-08-08T19:49:53.055238",
+    "duration_ms": 303.0275064267181,
+    "success": true,
+    "input_size": 1000,
+    "output_size": 2000,
+    "error_message": null,
+    "metadata": {
+      "benchmark": true,
+      "iteration": 10
+    }
+  },
+  {
+    "id": "93c5b876-8849-4813-aac7-54a9e7f8bdd6",
+    "skill_name": "benchmark_mcp",
+    "skill_type": "mcp",
+    "timestamp": "2025-08-08T19:49:53.056234",
+    "duration_ms": 386.73317783740805,
+    "success": true,
+    "input_size": 1000,
+    "output_size": 2000,
+    "error_message": null,
+    "metadata": {
+      "benchmark": true,
+      "iteration": 11
+    }
+  },
+  {
+    "id": "55f147e1-f87a-4068-9646-0cddccfa17b6",
+    "skill_name": "benchmark_mcp",
+    "skill_type": "mcp",
+    "timestamp": "2025-08-08T19:49:53.057253",
+    "duration_ms": 285.03422483117726,
+    "success": true,
+    "input_size": 1000,
+    "output_size": 2000,
+    "error_message": null,
+    "metadata": {
+      "benchmark": true,
+      "iteration": 12
+    }
+  },
+  {
+    "id": "6d3a1aef-6852-45c4-bc4a-8d5fbb0a00a3",
+    "skill_name": "benchmark_mcp",
+    "skill_type": "mcp",
+    "timestamp": "2025-08-08T19:49:53.058286",
+    "duration_ms": 415.440584767346,
+    "success": true,
+    "input_size": 1000,
+    "output_size": 2000,
+    "error_message": null,
+    "metadata": {
+      "benchmark": true,
+      "iteration": 13
+    }
+  },
+  {
+    "id": "eecd7940-44e4-4003-9d84-bc8bb412378f",
+    "skill_name": "benchmark_mcp",
+    "skill_type": "mcp",
+    "timestamp": "2025-08-08T19:49:53.060270",
+    "duration_ms": 2089.1545986956967,
+    "success": false,
+    "input_size": 1000,
+    "output_size": 2000,
+    "error_message": null,
+    "metadata": {
+      "benchmark": true,
+      "iteration": 14
+    }
+  },
+  {
+    "id": "a4d71fdf-e0f3-4630-912e-afe2223999cb",
+    "skill_name": "benchmark_mcp",
+    "skill_type": "mcp",
+    "timestamp": "2025-08-08T19:49:53.061342",
+    "duration_ms": 535.9346740962163,
+    "success": true,
+    "input_size": 1000,
+    "output_size": 2000,
+    "error_message": null,
+    "metadata": {
+      "benchmark": true,
+      "iteration": 15
+    }
+  },
+  {
+    "id": "c5e52543-ea05-4591-8b97-cf38284cd803",
+    "skill_name": "benchmark_mcp",
+    "skill_type": "mcp",
+    "timestamp": "2025-08-08T19:49:53.062414",
+    "duration_ms": 531.8294842586406,
+    "success": true,
+    "input_size": 1000,
+    "output_size": 2000,
+    "error_message": null,
+    "metadata": {
+      "benchmark": true,
+      "iteration": 16
+    }
+  },
+  {
+    "id": "67ab63a0-82d1-4fbb-bb72-9fd31d036be5",
+    "skill_name": "benchmark_mcp",
+    "skill_type": "mcp",
+    "timestamp": "2025-08-08T19:49:53.063502",
+    "duration_ms": 347.6072377585535,
+    "success": true,
+    "input_size": 1000,
+    "output_size": 2000,
+    "error_message": null,
+    "metadata": {
+      "benchmark": true,
+      "iteration": 17
+    }
+  },
+  {
+    "id": "f5992825-a67f-4588-bd35-d8ea5cb5d8f0",
+    "skill_name": "benchmark_mcp",
+    "skill_type": "mcp",
+    "timestamp": "2025-08-08T19:49:53.064595",
+    "duration_ms": 931.8924752954431,
+    "success": true,
+    "input_size": 1000,
+    "output_size": 2000,
+    "error_message": null,
+    "metadata": {
+      "benchmark": true,
+      "iteration": 18
+    }
+  },
+  {
+    "id": "f1ab1980-83fe-467b-b98d-f976c8e19c0e",
+    "skill_name": "benchmark_mcp",
+    "skill_type": "mcp",
+    "timestamp": "2025-08-08T19:49:53.065714",
+    "duration_ms": 245.84448518463148,
+    "success": true,
+    "input_size": 1000,
+    "output_size": 2000,
+    "error_message": null,
+    "metadata": {
+      "benchmark": true,
+      "iteration": 19
+    }
+  },
+  {
+    "id": "b73916aa-4eb6-4f49-b57d-1077c9216104",
+    "skill_name": "benchmark_mcp",
+    "skill_type": "mcp",
+    "timestamp": "2025-08-08T19:49:53.066835",
+    "duration_ms": 447.0001644760853,
+    "success": true,
+    "input_size": 1000,
+    "output_size": 2000,
+    "error_message": null,
+    "metadata": {
+      "benchmark": true,
+      "iteration": 20
+    }
+  },
+  {
+    "id": "68400e77-18c7-4689-8349-54719e6ef16d",
+    "skill_name": "benchmark_mcp",
+    "skill_type": "mcp",
+    "timestamp": "2025-08-08T19:49:53.067970",
+    "duration_ms": 540.4015148346364,
+    "success": true,
+    "input_size": 1000,
+    "output_size": 2000,
+    "error_message": null,
+    "metadata": {
+      "benchmark": true,
+      "iteration": 21
+    }
+  },
+  {
+    "id": "2a24e8e8-df70-4c3e-b17d-35204738def6",
+    "skill_name": "benchmark_mcp",
+    "skill_type": "mcp",
+    "timestamp": "2025-08-08T19:49:53.069123",
+    "duration_ms": 273.31854515501055,
+    "success": true,
+    "input_size": 1000,
+    "output_size": 2000,
+    "error_message": null,
+    "metadata": {
+      "benchmark": true,
+      "iteration": 22
+    }
+  },
+  {
+    "id": "b1c3cae4-c518-41e2-9ee1-c2e238ed44fb",
+    "skill_name": "benchmark_mcp",
+    "skill_type": "mcp",
+    "timestamp": "2025-08-08T19:49:53.070312",
+    "duration_ms": 370.98358657186276,
+    "success": true,
+    "input_size": 1000,
+    "output_size": 2000,
+    "error_message": null,
+    "metadata": {
+      "benchmark": true,
+      "iteration": 23
+    }
+  },
+  {
+    "id": "e3a55052-ddf1-4fbf-b217-a12de552a323",
+    "skill_name": "benchmark_mcp",
+    "skill_type": "mcp",
+    "timestamp": "2025-08-08T19:49:53.071510",
+    "duration_ms": 450.30208803940934,
+    "success": true,
+    "input_size": 1000,
+    "output_size": 2000,
+    "error_message": null,
+    "metadata": {
+      "benchmark": true,
+      "iteration": 24
+    }
+  },
+  {
+    "id": "106bbc5c-374c-4676-aba6-9fbed2f925ac",
+    "skill_name": "benchmark_mcp",
+    "skill_type": "mcp",
+    "timestamp": "2025-08-08T19:49:53.072788",
+    "duration_ms": 275.3106246485848,
+    "success": true,
+    "input_size": 1000,
+    "output_size": 2000,
+    "error_message": null,
+    "metadata": {
+      "benchmark": true,
+      "iteration": 25
+    }
+  },
+  {
+    "id": "488afc42-7b1d-473f-888e-b641e20e0a10",
+    "skill_name": "benchmark_mcp",
+    "skill_type": "mcp",
+    "timestamp": "2025-08-08T19:49:53.074022",
+    "duration_ms": 513.2892192747248,
+    "success": true,
+    "input_size": 1000,
+    "output_size": 2000,
+    "error_message": null,
+    "metadata": {
+      "benchmark": true,
+      "iteration": 26
+    }
+  },
+  {
+    "id": "6762ac6d-6ba4-40a5-ae3f-fb2cc0f75657",
+    "skill_name": "benchmark_mcp",
+    "skill_type": "mcp",
+    "timestamp": "2025-08-08T19:49:53.075297",
+    "duration_ms": 360.1497420949867,
+    "success": true,
+    "input_size": 1000,
+    "output_size": 2000,
+    "error_message": null,
+    "metadata": {
+      "benchmark": true,
+      "iteration": 27
+    }
+  },
+  {
+    "id": "5e4d072e-e5e0-4af4-a9e7-30e9f12ac17d",
+    "skill_name": "benchmark_mcp",
+    "skill_type": "mcp",
+    "timestamp": "2025-08-08T19:49:53.076561",
+    "duration_ms": 1643.578463223705,
+    "success": true,
+    "input_size": 1000,
+    "output_size": 2000,
+    "error_message": null,
+    "metadata": {
+      "benchmark": true,
+      "iteration": 28
+    }
+  },
+  {
+    "id": "89d50d9a-a901-4a06-9299-fa3418303213",
+    "skill_name": "benchmark_mcp",
+    "skill_type": "mcp",
+    "timestamp": "2025-08-08T19:49:53.077837",
+    "duration_ms": 427.6416523108176,
+    "success": true,
+    "input_size": 1000,
+    "output_size": 2000,
+    "error_message": null,
+    "metadata": {
+      "benchmark": true,
+      "iteration": 29
+    }
+  },
+  {
+    "id": "55faa8e7-bf9a-4f2e-8c97-3a28048eb4f8",
+    "skill_name": "scenario_mcp_Heavy_1p_usage",
+    "skill_type": "mcp",
+    "timestamp": "2025-08-08T19:49:53.079515",
+    "duration_ms": 580.8545154699988,
+    "success": true,
+    "input_size": 4710,
+    "output_size": 7872,
+    "error_message": null,
+    "metadata": {}
+  },
+  {
+    "id": "0eaeb021-11af-4ff0-997c-9b650c563fac",
+    "skill_name": "scenario_1p_Heavy_1p_usage",
+    "skill_type": "1p",
+    "timestamp": "2025-08-08T19:49:53.080852",
+    "duration_ms": 124.52372282300438,
+    "success": true,
+    "input_size": 1996,
+    "output_size": 2970,
+    "error_message": null,
+    "metadata": {}
+  },
+  {
+    "id": "a7363666-6325-40df-be42-5da5df852f84",
+    "skill_name": "scenario_mcp_Heavy_1p_usage",
+    "skill_type": "mcp",
+    "timestamp": "2025-08-08T19:49:53.082219",
+    "duration_ms": 340.1451300881649,
+    "success": true,
+    "input_size": 3048,
+    "output_size": 6342,
+    "error_message": null,
+    "metadata": {}
+  },
+  {
+    "id": "1146e1d9-3e2b-4d06-b108-faef7a56c4fb",
+    "skill_name": "scenario_1p_Heavy_1p_usage",
+    "skill_type": "1p",
+    "timestamp": "2025-08-08T19:49:53.083648",
+    "duration_ms": 94.59098163129822,
+    "success": true,
+    "input_size": 1394,
+    "output_size": 2107,
+    "error_message": null,
+    "metadata": {}
+  },
+  {
+    "id": "7e771ea6-fa6b-4a3e-908b-ffe6936fce05",
+    "skill_name": "scenario_1p_Heavy_1p_usage",
+    "skill_type": "1p",
+    "timestamp": "2025-08-08T19:49:53.085246",
+    "duration_ms": 138.43767628785594,
+    "success": true,
+    "input_size": 1068,
+    "output_size": 1503,
+    "error_message": null,
+    "metadata": {}
+  },
+  {
+    "id": "24ec530d-ddc2-47e9-bc61-73821d4162c3",
+    "skill_name": "scenario_1p_Heavy_1p_usage",
+    "skill_type": "1p",
+    "timestamp": "2025-08-08T19:49:53.086696",
+    "duration_ms": 116.47498378293339,
+    "success": true,
+    "input_size": 513,
+    "output_size": 2287,
+    "error_message": null,
+    "metadata": {}
+  },
+  {
+    "id": "8177d6f9-4e1e-4996-953c-58813ff64cb7",
+    "skill_name": "scenario_1p_Heavy_1p_usage",
+    "skill_type": "1p",
+    "timestamp": "2025-08-08T19:49:53.088078",
+    "duration_ms": 91.44176318824042,
+    "success": true,
+    "input_size": 948,
+    "output_size": 3395,
+    "error_message": null,
+    "metadata": {}
+  },
+  {
+    "id": "11acf8eb-d54a-4074-997f-674372e7ef53",
+    "skill_name": "scenario_1p_Heavy_1p_usage",
+    "skill_type": "1p",
+    "timestamp": "2025-08-08T19:49:53.089487",
+    "duration_ms": 50.36111641872945,
+    "success": true,
+    "input_size": 598,
+    "output_size": 2297,
+    "error_message": null,
+    "metadata": {}
+  },
+  {
+    "id": "38629764-3fda-4610-aec2-a2454393d1b1",
+    "skill_name": "scenario_mcp_Heavy_1p_usage",
+    "skill_type": "mcp",
+    "timestamp": "2025-08-08T19:49:53.090893",
+    "duration_ms": 378.6639565749588,
+    "success": true,
+    "input_size": 1417,
+    "output_size": 6399,
+    "error_message": null,
+    "metadata": {}
+  },
+  {
+    "id": "06778bc9-ca08-4cfd-bb74-a3381bb11cb6",
+    "skill_name": "scenario_1p_Heavy_1p_usage",
+    "skill_type": "1p",
+    "timestamp": "2025-08-08T19:49:53.092309",
+    "duration_ms": 88.88334033317132,
+    "success": true,
+    "input_size": 1937,
+    "output_size": 1221,
+    "error_message": null,
+    "metadata": {}
+  },
+  {
+    "id": "25ae331b-792f-436d-b011-4524963db9da",
+    "skill_name": "scenario_1p_Heavy_1p_usage",
+    "skill_type": "1p",
+    "timestamp": "2025-08-08T19:49:53.093717",
+    "duration_ms": 98.90389420216161,
+    "success": true,
+    "input_size": 1795,
+    "output_size": 1127,
+    "error_message": null,
+    "metadata": {}
+  },
+  {
+    "id": "09b25674-a4f2-4841-a7b9-0c328b607562",
+    "skill_name": "scenario_1p_Heavy_1p_usage",
+    "skill_type": "1p",
+    "timestamp": "2025-08-08T19:49:53.095137",
+    "duration_ms": 114.53881337446988,
+    "success": true,
+    "input_size": 1883,
+    "output_size": 2185,
+    "error_message": null,
+    "metadata": {}
+  },
+  {
+    "id": "e43749be-351f-47a4-9feb-6675a36d7a6d",
+    "skill_name": "scenario_1p_Heavy_1p_usage",
+    "skill_type": "1p",
+    "timestamp": "2025-08-08T19:49:53.096621",
+    "duration_ms": 109.90517486606932,
+    "success": true,
+    "input_size": 1281,
+    "output_size": 1562,
+    "error_message": null,
+    "metadata": {}
+  },
+  {
+    "id": "0b7d9a17-d93a-4b7b-a604-942310c26c26",
+    "skill_name": "scenario_1p_Heavy_1p_usage",
+    "skill_type": "1p",
+    "timestamp": "2025-08-08T19:49:53.098090",
+    "duration_ms": 107.8943390893998,
+    "success": true,
+    "input_size": 1663,
+    "output_size": 3042,
+    "error_message": null,
+    "metadata": {}
+  },
+  {
+    "id": "5be8efb2-ce1e-4d32-a514-2c6fd68561c0",
+    "skill_name": "scenario_1p_Heavy_1p_usage",
+    "skill_type": "1p",
+    "timestamp": "2025-08-08T19:49:53.099602",
+    "duration_ms": 119.73021198841923,
+    "success": true,
+    "input_size": 878,
+    "output_size": 1325,
+    "error_message": null,
+    "metadata": {}
+  },
+  {
+    "id": "f63ebcc7-6ef4-49a5-8df8-00088ade6cbd",
+    "skill_name": "scenario_1p_Heavy_1p_usage",
+    "skill_type": "1p",
+    "timestamp": "2025-08-08T19:49:53.101089",
+    "duration_ms": 131.03470049396222,
+    "success": true,
+    "input_size": 1037,
+    "output_size": 3275,
+    "error_message": null,
+    "metadata": {}
+  },
+  {
+    "id": "4f0b21eb-2f5f-4444-a13c-c0005a17fb4a",
+    "skill_name": "scenario_1p_Heavy_1p_usage",
+    "skill_type": "1p",
+    "timestamp": "2025-08-08T19:49:53.102616",
+    "duration_ms": 54.31310631924762,
+    "success": true,
+    "input_size": 1110,
+    "output_size": 2021,
+    "error_message": null,
+    "metadata": {}
+  },
+  {
+    "id": "05e46ca0-c4e8-44a5-9d12-c3d8c3a5a3eb",
+    "skill_name": "scenario_1p_Heavy_1p_usage",
+    "skill_type": "1p",
+    "timestamp": "2025-08-08T19:49:53.104144",
+    "duration_ms": 105.82756883212596,
+    "success": true,
+    "input_size": 1728,
+    "output_size": 1552,
+    "error_message": null,
+    "metadata": {}
+  },
+  {
+    "id": "2c88f9ac-b72e-41ba-a9c9-352b054c5858",
+    "skill_name": "scenario_1p_Heavy_1p_usage",
+    "skill_type": "1p",
+    "timestamp": "2025-08-08T19:49:53.105707",
+    "duration_ms": 84.37871912240492,
+    "success": true,
+    "input_size": 526,
+    "output_size": 2401,
+    "error_message": null,
+    "metadata": {}
+  },
+  {
+    "id": "3f9dc1b7-fea4-48d0-b298-0efdd12171bd",
+    "skill_name": "scenario_1p_Balanced_usage",
+    "skill_type": "1p",
+    "timestamp": "2025-08-08T19:49:53.107268",
+    "duration_ms": 106.04551785196385,
+    "success": true,
+    "input_size": 1406,
+    "output_size": 3812,
+    "error_message": null,
+    "metadata": {}
+  },
+  {
+    "id": "a1d972d4-269c-4666-ad32-55426e402201",
+    "skill_name": "scenario_mcp_Balanced_usage",
+    "skill_type": "mcp",
+    "timestamp": "2025-08-08T19:49:53.108838",
+    "duration_ms": 365.28331267462187,
+    "success": true,
+    "input_size": 4447,
+    "output_size": 3711,
+    "error_message": null,
+    "metadata": {}
+  },
+  {
+    "id": "9fa3db10-6130-47be-9d7e-ec44fdfad08c",
+    "skill_name": "scenario_mcp_Balanced_usage",
+    "skill_type": "mcp",
+    "timestamp": "2025-08-08T19:49:53.110526",
+    "duration_ms": 707.16783739481,
+    "success": true,
+    "input_size": 3633,
+    "output_size": 4367,
+    "error_message": null,
+    "metadata": {}
+  },
+  {
+    "id": "de941eee-43fc-4f5c-a901-ac0e4d68c0b4",
+    "skill_name": "scenario_1p_Balanced_usage",
+    "skill_type": "1p",
+    "timestamp": "2025-08-08T19:49:53.112095",
+    "duration_ms": 100.62724934252789,
+    "success": true,
+    "input_size": 988,
+    "output_size": 2836,
+    "error_message": null,
+    "metadata": {}
+  },
+  {
+    "id": "c05ed75d-e00d-4222-8e87-ec48fd1944d5",
+    "skill_name": "scenario_1p_Balanced_usage",
+    "skill_type": "1p",
+    "timestamp": "2025-08-08T19:49:53.113687",
+    "duration_ms": 65.28174686843681,
+    "success": true,
+    "input_size": 735,
+    "output_size": 3515,
+    "error_message": null,
+    "metadata": {}
+  },
+  {
+    "id": "25b2b71c-25d5-4ddd-9b95-72606ee21668",
+    "skill_name": "scenario_mcp_Balanced_usage",
+    "skill_type": "mcp",
+    "timestamp": "2025-08-08T19:49:53.115291",
+    "duration_ms": 363.0236859405317,
+    "success": true,
+    "input_size": 2171,
+    "output_size": 5679,
+    "error_message": null,
+    "metadata": {}
+  },
+  {
+    "id": "e18fdaa1-8b63-49e8-8100-195ddbe18d60",
+    "skill_name": "scenario_mcp_Balanced_usage",
+    "skill_type": "mcp",
+    "timestamp": "2025-08-08T19:49:53.116892",
+    "duration_ms": 456.16322913069206,
+    "success": true,
+    "input_size": 3962,
+    "output_size": 2732,
+    "error_message": null,
+    "metadata": {}
+  },
+  {
+    "id": "24a64d42-46ec-42dd-ac40-e00312eff549",
+    "skill_name": "scenario_mcp_Balanced_usage",
+    "skill_type": "mcp",
+    "timestamp": "2025-08-08T19:49:53.120146",
+    "duration_ms": 522.635876893689,
+    "success": true,
+    "input_size": 1339,
+    "output_size": 2296,
+    "error_message": null,
+    "metadata": {}
+  },
+  {
+    "id": "ccb582c6-e358-42d7-bbba-06a80be1eed5",
+    "skill_name": "scenario_mcp_Balanced_usage",
+    "skill_type": "mcp",
+    "timestamp": "2025-08-08T19:49:53.121790",
+    "duration_ms": 777.9938690618729,
+    "success": true,
+    "input_size": 4054,
+    "output_size": 2105,
+    "error_message": null,
+    "metadata": {}
+  },
+  {
+    "id": "49a4df0e-6580-46cf-aa5f-f654922000a9",
+    "skill_name": "scenario_1p_Balanced_usage",
+    "skill_type": "1p",
+    "timestamp": "2025-08-08T19:49:53.123464",
+    "duration_ms": 81.3447038821514,
+    "success": true,
+    "input_size": 1082,
+    "output_size": 2045,
+    "error_message": null,
+    "metadata": {}
+  },
+  {
+    "id": "0c555dc4-40bd-4839-aeb4-c063100c8996",
+    "skill_name": "scenario_mcp_Balanced_usage",
+    "skill_type": "mcp",
+    "timestamp": "2025-08-08T19:49:53.125122",
+    "duration_ms": 542.032362069126,
+    "success": true,
+    "input_size": 1623,
+    "output_size": 7044,
+    "error_message": null,
+    "metadata": {}
+  },
+  {
+    "id": "c54d0ba3-1006-47d2-ac6b-f2280f63e520",
+    "skill_name": "scenario_mcp_Balanced_usage",
+    "skill_type": "mcp",
+    "timestamp": "2025-08-08T19:49:53.126810",
+    "duration_ms": 546.3179173381543,
+    "success": true,
+    "input_size": 3123,
+    "output_size": 2192,
+    "error_message": null,
+    "metadata": {}
+  },
+  {
+    "id": "7cbaf77e-27fc-4057-bb12-f24371b7b77b",
+    "skill_name": "scenario_mcp_Balanced_usage",
+    "skill_type": "mcp",
+    "timestamp": "2025-08-08T19:49:53.128500",
+    "duration_ms": 314.5093943080326,
+    "success": true,
+    "input_size": 2997,
+    "output_size": 7899,
+    "error_message": null,
+    "metadata": {}
+  },
+  {
+    "id": "2beb50e0-c90c-4c74-8df0-3cbfc28fa4a5",
+    "skill_name": "scenario_mcp_Balanced_usage",
+    "skill_type": "mcp",
+    "timestamp": "2025-08-08T19:49:53.130185",
+    "duration_ms": 433.6911078057072,
+    "success": true,
+    "input_size": 2659,
+    "output_size": 9209,
+    "error_message": null,
+    "metadata": {}
+  },
+  {
+    "id": "17b34e58-fca0-40cc-949d-752a22eb856a",
+    "skill_name": "scenario_1p_Balanced_usage",
+    "skill_type": "1p",
+    "timestamp": "2025-08-08T19:49:53.131902",
+    "duration_ms": 77.77323015450563,
+    "success": true,
+    "input_size": 566,
+    "output_size": 3286,
+    "error_message": null,
+    "metadata": {}
+  },
+  {
+    "id": "611462a6-bc9a-436d-b31d-ea361a7adba9",
+    "skill_name": "scenario_1p_Balanced_usage",
+    "skill_type": "1p",
+    "timestamp": "2025-08-08T19:49:53.133617",
+    "duration_ms": 160.8272930979895,
+    "success": true,
+    "input_size": 756,
+    "output_size": 2640,
+    "error_message": null,
+    "metadata": {}
+  },
+  {
+    "id": "f9e3b051-14ae-4ce3-9922-e52e8d246997",
+    "skill_name": "scenario_mcp_Balanced_usage",
+    "skill_type": "mcp",
+    "timestamp": "2025-08-08T19:49:53.135347",
+    "duration_ms": 100,
+    "success": true,
+    "input_size": 1651,
+    "output_size": 4843,
+    "error_message": null,
+    "metadata": {}
+  },
+  {
+    "id": "5c4316cc-6d81-4eff-8c30-81ede1fcc6a2",
+    "skill_name": "scenario_mcp_MCP-heavy_usage",
+    "skill_type": "mcp",
+    "timestamp": "2025-08-08T19:49:53.137096",
+    "duration_ms": 532.5702657819965,
+    "success": true,
+    "input_size": 1532,
+    "output_size": 8904,
+    "error_message": null,
+    "metadata": {}
+  },
+  {
+    "id": "c7932dc3-8079-4609-8def-486064e31eb5",
+    "skill_name": "scenario_mcp_MCP-heavy_usage",
+    "skill_type": "mcp",
+    "timestamp": "2025-08-08T19:49:53.138874",
+    "duration_ms": 516.9098693457306,
+    "success": true,
+    "input_size": 2041,
+    "output_size": 4967,
+    "error_message": null,
+    "metadata": {}
+  },
+  {
+    "id": "4ff88be1-9aa2-4d3e-bd83-f093038b2e90",
+    "skill_name": "scenario_mcp_MCP-heavy_usage",
+    "skill_type": "mcp",
+    "timestamp": "2025-08-08T19:49:53.140730",
+    "duration_ms": 401.58445327248404,
+    "success": true,
+    "input_size": 2909,
+    "output_size": 9156,
+    "error_message": null,
+    "metadata": {}
+  },
+  {
+    "id": "526b0528-609f-40bd-92bb-6290574e5b1e",
+    "skill_name": "scenario_mcp_MCP-heavy_usage",
+    "skill_type": "mcp",
+    "timestamp": "2025-08-08T19:49:53.142519",
+    "duration_ms": 442.1634476942174,
+    "success": true,
+    "input_size": 1295,
+    "output_size": 2837,
+    "error_message": null,
+    "metadata": {}
+  },
+  {
+    "id": "8654de03-07c3-4986-89a2-80ca1c3d95d7",
+    "skill_name": "scenario_mcp_MCP-heavy_usage",
+    "skill_type": "mcp",
+    "timestamp": "2025-08-08T19:49:53.144327",
+    "duration_ms": 567.5594053201598,
+    "success": true,
+    "input_size": 2786,
+    "output_size": 2346,
+    "error_message": null,
+    "metadata": {}
+  },
+  {
+    "id": "66aa5201-6ef3-4994-9cff-91c9a4d6d464",
+    "skill_name": "scenario_1p_MCP-heavy_usage",
+    "skill_type": "1p",
+    "timestamp": "2025-08-08T19:49:53.146122",
+    "duration_ms": 107.77284758000496,
+    "success": true,
+    "input_size": 1599,
+    "output_size": 2737,
+    "error_message": null,
+    "metadata": {}
+  },
+  {
+    "id": "84c01c3e-bb84-4371-a798-8169c00a5d79",
+    "skill_name": "scenario_mcp_MCP-heavy_usage",
+    "skill_type": "mcp",
+    "timestamp": "2025-08-08T19:49:53.147955",
+    "duration_ms": 132.70340177239382,
+    "success": true,
+    "input_size": 3298,
+    "output_size": 4531,
+    "error_message": null,
+    "metadata": {}
+  },
+  {
+    "id": "f18c8594-4370-48a4-88bf-5676578c09e5",
+    "skill_name": "scenario_mcp_MCP-heavy_usage",
+    "skill_type": "mcp",
+    "timestamp": "2025-08-08T19:49:53.149789",
+    "duration_ms": 351.4286456761351,
+    "success": true,
+    "input_size": 1515,
+    "output_size": 4266,
+    "error_message": null,
+    "metadata": {}
+  },
+  {
+    "id": "c3e594f3-13d1-46b9-9fa1-9f5bebd1a8d6",
+    "skill_name": "scenario_1p_MCP-heavy_usage",
+    "skill_type": "1p",
+    "timestamp": "2025-08-08T19:49:53.151646",
+    "duration_ms": 93.96024704324735,
+    "success": true,
+    "input_size": 1112,
+    "output_size": 3931,
+    "error_message": null,
+    "metadata": {}
+  },
+  {
+    "id": "2901236c-727d-4df3-9259-c5ea0eaceeba",
+    "skill_name": "scenario_mcp_MCP-heavy_usage",
+    "skill_type": "mcp",
+    "timestamp": "2025-08-08T19:49:53.153493",
+    "duration_ms": 681.9477326638992,
+    "success": true,
+    "input_size": 4542,
+    "output_size": 6587,
+    "error_message": null,
+    "metadata": {}
+  },
+  {
+    "id": "6dd1b618-aa8c-4fb0-899c-f22daae67969",
+    "skill_name": "scenario_1p_MCP-heavy_usage",
+    "skill_type": "1p",
+    "timestamp": "2025-08-08T19:49:53.155373",
+    "duration_ms": 74.54272330425515,
+    "success": true,
+    "input_size": 1317,
+    "output_size": 3520,
+    "error_message": null,
+    "metadata": {}
+  },
+  {
+    "id": "d9263891-a8a4-492c-beed-7972e2d0bed4",
+    "skill_name": "scenario_1p_MCP-heavy_usage",
+    "skill_type": "1p",
+    "timestamp": "2025-08-08T19:49:53.157255",
+    "duration_ms": 97.3208560885172,
+    "success": true,
+    "input_size": 519,
+    "output_size": 2822,
+    "error_message": null,
+    "metadata": {}
+  },
+  {
+    "id": "836849ac-2289-4e07-ab1f-304f8d5ef500",
+    "skill_name": "scenario_mcp_MCP-heavy_usage",
+    "skill_type": "mcp",
+    "timestamp": "2025-08-08T19:49:53.159142",
+    "duration_ms": 343.07570197297065,
+    "success": true,
+    "input_size": 2176,
+    "output_size": 7701,
+    "error_message": null,
+    "metadata": {}
+  },
+  {
+    "id": "34dc59fd-50ca-48e2-bff5-6d3ead9ad6db",
+    "skill_name": "scenario_mcp_MCP-heavy_usage",
+    "skill_type": "mcp",
+    "timestamp": "2025-08-08T19:49:53.161054",
+    "duration_ms": 569.567670805465,
+    "success": false,
+    "input_size": 1363,
+    "output_size": 6308,
+    "error_message": null,
+    "metadata": {}
+  },
+  {
+    "id": "4e6470b5-bcc1-4f71-803e-fbbaa3099093",
+    "skill_name": "scenario_1p_MCP-heavy_usage",
+    "skill_type": "1p",
+    "timestamp": "2025-08-08T19:49:53.162966",
+    "duration_ms": 78.78284442423667,
+    "success": true,
+    "input_size": 640,
+    "output_size": 1778,
+    "error_message": null,
+    "metadata": {}
+  },
+  {
+    "id": "e95305dc-902e-4c53-b31a-730633bcb8b1",
+    "skill_name": "scenario_mcp_MCP-heavy_usage",
+    "skill_type": "mcp",
+    "timestamp": "2025-08-08T19:49:53.164887",
+    "duration_ms": 338.99627038649135,
+    "success": false,
+    "input_size": 4857,
+    "output_size": 6318,
+    "error_message": null,
+    "metadata": {}
+  },
+  {
+    "id": "9007ec34-a9c5-4d60-9528-c98bf951ab10",
+    "skill_name": "scenario_1p_MCP-heavy_usage",
+    "skill_type": "1p",
+    "timestamp": "2025-08-08T19:49:53.166835",
+    "duration_ms": 102.7871083277631,
+    "success": true,
+    "input_size": 1498,
+    "output_size": 2906,
+    "error_message": null,
+    "metadata": {}
+  },
+  {
+    "id": "0b9702cc-8294-4a6c-9af4-8e6a6ea671ab",
+    "skill_name": "scenario_mcp_MCP-heavy_usage",
+    "skill_type": "mcp",
+    "timestamp": "2025-08-08T19:49:53.168812",
+    "duration_ms": 761.5556988844623,
+    "success": true,
+    "input_size": 4577,
+    "output_size": 5240,
+    "error_message": null,
+    "metadata": {}
+  },
+  {
+    "id": "40e0a8b7-711d-448b-8d88-38f7ba002254",
+    "skill_name": "scenario_1p_MCP-heavy_usage",
+    "skill_type": "1p",
+    "timestamp": "2025-08-08T19:49:53.170877",
+    "duration_ms": 112.79741469735274,
+    "success": true,
+    "input_size": 1143,
+    "output_size": 2216,
+    "error_message": null,
+    "metadata": {}
+  },
+  {
+    "id": "50b8e78d-0026-42bb-b6aa-c5e03fb4fcb6",
+    "skill_name": "scenario_mcp_MCP-heavy_usage",
+    "skill_type": "mcp",
+    "timestamp": "2025-08-08T19:49:53.172904",
+    "duration_ms": 480.37795297256434,
+    "success": true,
+    "input_size": 4090,
+    "output_size": 8953,
+    "error_message": null,
+    "metadata": {}
+  },
+  {
+    "id": "06d706c3-624f-41c3-a08d-718bf957cd05",
+    "skill_name": "scenario_mcp_MCP-heavy_usage",
+    "skill_type": "mcp",
+    "timestamp": "2025-08-08T19:49:53.174918",
+    "duration_ms": 414.4163098522185,
+    "success": true,
+    "input_size": 1530,
+    "output_size": 6589,
+    "error_message": null,
+    "metadata": {}
   }
 ]
