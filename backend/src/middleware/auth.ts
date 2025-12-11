@@ -34,3 +34,5 @@ export const authenticate = async (
     next(new ApiError(401, 'Invalid or expired token'))
   }
 }
+
+module.exports = { authenticate }

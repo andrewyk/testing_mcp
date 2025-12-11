@@ -129,3 +129,11 @@ export const deleteProject = async (
     next(error)
   }
 }
+
+module.exports = {
+  getProjects,
+  getProjectById,
+  createProject,
+  updateProject,
+  deleteProject,
+}

@@ -18,4 +18,4 @@ router.post('/', createTask)
 router.put('/:id', updateTask)
 router.delete('/:id', deleteTask)
 
-export default router
+module.exports = router

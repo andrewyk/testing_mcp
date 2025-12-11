@@ -130,3 +130,11 @@ export const deleteTask = async (
     next(error)
   }
 }
+
+module.exports = {
+  getTasks,
+  getTaskById,
+  createTask,
+  updateTask,
+  deleteTask,
+}

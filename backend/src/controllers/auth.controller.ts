@@ -61,14 +61,19 @@ export const login = async (
   try {
     const validatedData = loginSchema.parse(req.body)
 
-    // TODO: Find user in database
-    // TODO: Verify password
-    const isValid = await bcrypt.compare(validatedData.password, 'hashed-password')
+    // TODO: Find user in database by email
+    // const user = await findUserByEmail(validatedData.email)
+    // if (!user) {
+    //   throw new ApiError(401, 'Invalid credentials')
+    // }
 
-    if (!isValid) {
-      throw new ApiError(401, 'Invalid credentials')
-    }
+    // TODO: Verify password against stored hash
+    // const isValid = await bcrypt.compare(validatedData.password, user.password_hash)
+    // if (!isValid) {
+    //   throw new ApiError(401, 'Invalid credentials')
+    // }
 
+    // Temporary mock implementation - replace with database queries
     const user = {
       id: 'temp-id',
       email: validatedData.email,
@@ -118,3 +123,5 @@ export const getProfile = async (
     next(error)
   }
 }
+
+module.exports = { register, login, getProfile }

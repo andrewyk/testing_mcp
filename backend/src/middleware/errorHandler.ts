@@ -38,3 +38,5 @@ export class ApiError extends Error implements AppError {
     Error.captureStackTrace(this, this.constructor)
   }
 }
+
+module.exports = { errorHandler, ApiError }
