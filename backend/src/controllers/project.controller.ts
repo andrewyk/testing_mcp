@@ -62,7 +62,7 @@ export const getProjects = async (req: AuthRequest, res: Response) => {
     );
 
     res.json({
-      projects: result.rows.map(project => ({
+      projects: result.rows.map((project: any) => ({
         id: project.id,
         name: project.name,
         description: project.description,

@@ -96,7 +96,7 @@ export const getTasks = async (req: AuthRequest, res: Response) => {
     const result = await pool.query(query, params);
 
     res.json({
-      tasks: result.rows.map(task => ({
+      tasks: result.rows.map((task: any) => ({
         id: task.id,
         title: task.title,
         description: task.description,
