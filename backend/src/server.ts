@@ -4,6 +4,7 @@ import helmet from 'helmet';
 import morgan from 'morgan';
 import { config } from './config';
 import { errorHandler } from './middleware/errorHandler';
+import { apiLimiter } from './middleware/rateLimiter';
 import { initDatabase } from './models';
 import authRoutes from './routes/auth.routes';
 import taskRoutes from './routes/task.routes';
@@ -22,6 +23,9 @@ app.use(cors({ origin: config.corsOrigin, credentials: true }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(morgan('dev'));
+
+// Rate limiting for all API routes
+app.use('/api/', apiLimiter);
 
 // Health check
 app.get('/health', (req, res) => {
