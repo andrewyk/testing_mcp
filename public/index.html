@@ -877,6 +877,7 @@
       const isEdit = task !== null;
       return `
         <form id="task-form" onsubmit="handleTaskSubmit(event, ${isEdit})">
+          ${isEdit ? `<input type="hidden" name="taskId" value="${task.id}">` : ''}
           <div class="form-group">
             <label class="form-label">Title *</label>
             <input 
@@ -1090,9 +1091,7 @@
 
       try {
         if (isEdit) {
-          const taskId = state.tasks.find(t => 
-            form.querySelector('[name="title"]').value === t.title
-          )?.id;
+          const taskId = formData.get('taskId');
           if (taskId) {
             await api.updateTask(taskId, taskData);
           }
