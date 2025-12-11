@@ -16,7 +16,7 @@ let tasks = [];
 let nextId = 1;
 
 // Helper function to find task by ID
-const findTaskById = (id) => tasks.find(task => task.id === id);
+const findTaskById = (id) => tasks.find(task => task.id === String(id));
 
 // GET /api/tasks - Get all tasks
 app.get('/api/tasks', (req, res) => {
@@ -143,7 +143,12 @@ app.put('/api/tasks/:id', (req, res) => {
   
   if (completed !== undefined && typeof completed === 'boolean') {
     task.completed = completed;
-    task.status = completed ? 'completed' : 'in_progress';
+    // Only update status if marking as completed, preserve existing status when uncompleting
+    if (completed) {
+      task.status = 'completed';
+    } else if (task.status === 'completed') {
+      task.status = 'in_progress';
+    }
   }
   
   if (dueDate !== undefined) {

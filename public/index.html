@@ -315,7 +315,8 @@
     </div>
 
     <script>
-        const API_URL = 'http://localhost:3000/api/tasks';
+        // Use relative URL for better portability across environments
+        const API_URL = window.location.origin + '/api/tasks';
         let currentFilter = 'all';
 
         // Load tasks on page load
