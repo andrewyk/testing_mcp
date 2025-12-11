@@ -1,5 +1,5 @@
 import api from './api';
-import { Task, CreateTaskData } from '../types';
+import { Task, CreateTaskData, UpdateTaskData } from '../types';
 
 export const taskService = {
   async getTasks(params?: Record<string, any>) {
@@ -17,7 +17,7 @@ export const taskService = {
     return response.data.task as Task;
   },
 
-  async updateTask(id: string, data: Partial<CreateTaskData>) {
+  async updateTask(id: string, data: UpdateTaskData) {
     const response = await api.put(`/tasks/${id}`, data);
     return response.data.task as Task;
   },

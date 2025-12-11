@@ -97,7 +97,8 @@ export const createTask = async (
     const task = await Task.create(taskData);
 
     if (req.body.tags && Array.isArray(req.body.tags)) {
-      await (task as any).setTags(req.body.tags);
+      const taskWithTags = task as Task & { setTags: (tags: string[]) => Promise<void> };
+      await taskWithTags.setTags(req.body.tags);
     }
 
     const createdTask = await Task.findByPk(task.id, {
@@ -134,7 +135,8 @@ export const updateTask = async (
     await task.update(req.body);
 
     if (req.body.tags && Array.isArray(req.body.tags)) {
-      await (task as any).setTags(req.body.tags);
+      const taskWithTags = task as Task & { setTags: (tags: string[]) => Promise<void> };
+      await taskWithTags.setTags(req.body.tags);
     }
 
     const updatedTask = await Task.findByPk(task.id, {

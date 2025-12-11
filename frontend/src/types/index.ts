@@ -56,3 +56,15 @@ export interface CreateTaskData {
   assigneeId?: string;
   tags?: string[];
 }
+
+export interface UpdateTaskData {
+  title?: string;
+  description?: string;
+  priority?: Priority;
+  dueDate?: string;
+  status?: Status;
+  isCompleted?: boolean;
+  projectId?: string;
+  assigneeId?: string;
+  tags?: string[];
+}

@@ -1,5 +1,5 @@
 import { FiCheck, FiTrash2, FiCalendar } from 'react-icons/fi';
-import { Task, Priority } from '../types';
+import { Task, Priority, UpdateTaskData } from '../types';
 import { taskService } from '../services/task.service';
 import toast from 'react-hot-toast';
 import { format } from 'date-fns';
@@ -26,10 +26,11 @@ const priorityBadges: Record<Priority, string> = {
 export default function TaskItem({ task, onUpdate }: TaskItemProps) {
   const handleToggleComplete = async () => {
     try {
-      await taskService.updateTask(task.id, {
+      const updateData: UpdateTaskData = {
         isCompleted: !task.isCompleted,
         status: !task.isCompleted ? 'completed' : 'not_started',
-      } as any);
+      };
+      await taskService.updateTask(task.id, updateData);
       toast.success(task.isCompleted ? 'Task marked incomplete' : 'Task completed!');
       onUpdate();
     } catch (error) {

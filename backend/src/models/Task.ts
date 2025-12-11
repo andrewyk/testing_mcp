@@ -25,7 +25,21 @@ interface TaskAttributes {
   updatedAt?: Date;
 }
 
-interface TaskCreationAttributes extends Optional<TaskAttributes, 'id' | 'description' | 'dueDate' | 'completedAt' | 'estimatedTime' | 'actualTime' | 'recurrence' | 'projectId' | 'assigneeId' | 'parentTaskId' | 'createdAt' | 'updatedAt'> {}
+type TaskOptionalFields = 
+  | 'id' 
+  | 'description' 
+  | 'dueDate' 
+  | 'completedAt' 
+  | 'estimatedTime' 
+  | 'actualTime' 
+  | 'recurrence' 
+  | 'projectId' 
+  | 'assigneeId' 
+  | 'parentTaskId' 
+  | 'createdAt' 
+  | 'updatedAt';
+
+interface TaskCreationAttributes extends Optional<TaskAttributes, TaskOptionalFields> {}
 
 class Task extends Model<TaskAttributes, TaskCreationAttributes> implements TaskAttributes {
   public id!: string;
