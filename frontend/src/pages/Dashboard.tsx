@@ -50,7 +50,8 @@ const Dashboard: React.FC = () => {
   };
 
   const handleDeleteTask = (taskId: number) => {
-    if (confirm('Are you sure you want to delete this task?')) {
+    // TODO: Replace with custom modal component in future
+    if (window.confirm('Are you sure you want to delete this task?')) {
       dispatch(deleteTask(taskId));
     }
   };
