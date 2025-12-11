@@ -1,7 +1,6 @@
 import jwt from 'jsonwebtoken';
 import User from '../models/User.js';
-
-const JWT_SECRET = process.env.JWT_SECRET || 'your-secret-key-change-in-production';
+import config from '../config/config.js';
 
 export const authMiddleware = async (req, res, next) => {
   try {
@@ -18,7 +17,7 @@ export const authMiddleware = async (req, res, next) => {
     const token = authHeader.split(' ')[1];
 
     // Verify token
-    const decoded = jwt.verify(token, JWT_SECRET);
+    const decoded = jwt.verify(token, config.jwtSecret);
 
     // Check if user exists
     const user = User.findById(decoded.id);
