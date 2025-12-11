@@ -151,8 +151,12 @@ export const createTask = async (req: AuthRequest, res: Response) => {
     const task = result.rows[0];
 
     if (tags && tags.length > 0) {
-      const tagValues = tags.map((tagId: number) => `(${task.id}, ${tagId})`).join(',');
-      await pool.query(`INSERT INTO task_tags (task_id, tag_id) VALUES ${tagValues}`);
+      const tagInsertValues = tags.map((_, index) => `($1, $${index + 2})`).join(',');
+      const tagParams = [task.id, ...tags];
+      await pool.query(
+        `INSERT INTO task_tags (task_id, tag_id) VALUES ${tagInsertValues}`,
+        tagParams
+      );
     }
 
     await pool.query(
@@ -203,13 +207,13 @@ export const updateTask = async (req: AuthRequest, res: Response) => {
       return res.status(400).json({ error: 'No valid fields to update' });
     }
 
-    const setClause = updateFields
+    let setClause = updateFields
       .map((field, index) => `${field} = $${index + 2}`)
       .join(', ');
-    const values = updateFields.map((field) => updates[field]);
+    let values = updateFields.map((field) => updates[field]);
 
     if (updates.status === 'completed' && !updates.completed_at) {
-      updateFields.push('completed_at');
+      setClause += `, completed_at = $${updateFields.length + 2}`;
       values.push(new Date());
     }
 
@@ -221,11 +225,11 @@ export const updateTask = async (req: AuthRequest, res: Response) => {
     if (updates.tags !== undefined) {
       await pool.query('DELETE FROM task_tags WHERE task_id = $1', [id]);
       if (updates.tags.length > 0) {
-        const tagValues = updates.tags
-          .map((tagId: number) => `(${id}, ${tagId})`)
-          .join(',');
+        const tagInsertValues = updates.tags.map((_, index) => `($1, $${index + 2})`).join(',');
+        const tagParams = [id, ...updates.tags];
         await pool.query(
-          `INSERT INTO task_tags (task_id, tag_id) VALUES ${tagValues}`
+          `INSERT INTO task_tags (task_id, tag_id) VALUES ${tagInsertValues}`,
+          tagParams
         );
       }
     }

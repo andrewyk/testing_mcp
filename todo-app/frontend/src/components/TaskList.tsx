@@ -146,8 +146,8 @@ export default function TaskList({ tasks, projects, tags }: TaskListProps) {
                   </span>
                 )}
 
-                {task.tags && task.tags.length > 0 && task.tags[0] !== null &&
-                  task.tags.map((tag) => (
+                {task.tags && task.tags.length > 0 &&
+                  task.tags.filter(tag => tag !== null).map((tag) => (
                     <span
                       key={tag.id}
                       className="inline-flex items-center px-2 py-1 rounded text-xs font-medium"
