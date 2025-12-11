@@ -6,6 +6,7 @@ import authRoutes from './routes/auth.routes'
 import taskRoutes from './routes/task.routes'
 import projectRoutes from './routes/project.routes'
 import { errorHandler } from './middleware/errorHandler'
+import { rateLimiter } from './middleware/rateLimiter'
 
 dotenv.config()
 
@@ -17,6 +18,10 @@ app.use(helmet())
 app.use(cors())
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
+
+// Apply rate limiting to all routes
+// TODO: Configure different limits for different route types in production
+app.use(rateLimiter(15 * 60 * 1000, 100)) // 100 requests per 15 minutes
 
 // Routes
 app.use('/api/auth', authRoutes)
