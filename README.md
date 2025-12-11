@@ -12,8 +12,9 @@ This repository serves as an experimental workspace for testing MCP functionalit
 
 The repository includes:
 - A `.github` directory for GitHub-specific configurations
-- Multiple test files (akfile1.txt through akfile8.txt, andrewkfile2.txt through andrewkfile5.txt)
-- Additional test files like `ak2.txt`, `update_test.txt`, `newfile11.txt`, and `reviews`
+- Multiple test files (akfile1.txt, akfile2.txt, akfile6.txt, akfile7.txt, akfile8.txt)
+- Additional test files (andrewkfile2.txt through andrewkfile5.txt)
+- Other test files: `ak2.txt`, `update_test.txt`, `newfile11.txt`, and `reviews`
 - Documentation files including this README.md and aknewfile1.md
 
 ## About MCP
