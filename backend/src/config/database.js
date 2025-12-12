@@ -5,7 +5,8 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const dbPath = path.join(__dirname, '../../database.sqlite');
+// Use environment variable for database path if available
+const dbPath = process.env.DATABASE_PATH || path.join(__dirname, '../../database.sqlite');
 const db = new Database(dbPath);
 
 // Enable foreign keys
