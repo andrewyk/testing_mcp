@@ -58,7 +58,7 @@ function addTodo() {
     }
     
     const todo = {
-        id: Date.now(),
+        id: Date.now() + Math.random(), // Prevent collisions with random component
         text: text,
         completed: false
     };
