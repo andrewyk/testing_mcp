@@ -228,8 +228,13 @@
 
             // Load todos from localStorage
             loadTodos() {
-                const todosJSON = localStorage.getItem('todos');
-                return todosJSON ? JSON.parse(todosJSON) : [];
+                try {
+                    const todosJSON = localStorage.getItem('todos');
+                    return todosJSON ? JSON.parse(todosJSON) : [];
+                } catch (error) {
+                    console.error('Error loading todos from localStorage:', error);
+                    return [];
+                }
             }
 
             // Save todos to localStorage
@@ -249,9 +254,9 @@
                     return;
                 }
 
-                // Create new todo object
+                // Create new todo object with a unique ID
                 const newTodo = {
-                    id: Date.now(),
+                    id: Date.now() + Math.random(), // Combine timestamp with random number for uniqueness
                     text: todoText,
                     completed: false
                 };
