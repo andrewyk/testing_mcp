@@ -337,9 +337,9 @@ export const getStats = async (req, res) => {
       total: db.prepare('SELECT COUNT(*) as count FROM todos WHERE user_id = ? AND deleted = 0').get(req.userId).count,
       active: db.prepare('SELECT COUNT(*) as count FROM todos WHERE user_id = ? AND completed = 0 AND deleted = 0').get(req.userId).count,
       completed: db.prepare('SELECT COUNT(*) as count FROM todos WHERE user_id = ? AND completed = 1 AND deleted = 0').get(req.userId).count,
-      overdue: db.prepare('SELECT COUNT(*) as count FROM todos WHERE user_id = ? AND completed = 0 AND deleted = 0 AND due_date < date("now")').get(req.userId).count,
-      today: db.prepare('SELECT COUNT(*) as count FROM todos WHERE user_id = ? AND completed = 0 AND deleted = 0 AND date(due_date) = date("now")').get(req.userId).count,
-      thisWeek: db.prepare('SELECT COUNT(*) as count FROM todos WHERE user_id = ? AND completed = 0 AND deleted = 0 AND date(due_date) BETWEEN date("now") AND date("now", "+7 days")').get(req.userId).count
+      overdue: db.prepare("SELECT COUNT(*) as count FROM todos WHERE user_id = ? AND completed = 0 AND deleted = 0 AND date(due_date) < date('now')").get(req.userId).count,
+      today: db.prepare("SELECT COUNT(*) as count FROM todos WHERE user_id = ? AND completed = 0 AND deleted = 0 AND date(due_date) = date('now')").get(req.userId).count,
+      thisWeek: db.prepare("SELECT COUNT(*) as count FROM todos WHERE user_id = ? AND completed = 0 AND deleted = 0 AND date(due_date) BETWEEN date('now') AND date('now', '+7 days')").get(req.userId).count
     };
 
     res.json(stats);
