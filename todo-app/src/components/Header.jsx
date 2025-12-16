@@ -19,7 +19,7 @@ const Header = () => {
           const importedTasks = JSON.parse(e.target.result);
           importTasks(importedTasks);
           alert('Tasks imported successfully!');
-        } catch (error) {
+        } catch {
           alert('Error importing tasks. Please check the file format.');
         }
       };

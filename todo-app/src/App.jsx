@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 import { TaskProvider } from './contexts/TaskContext';
 import { CategoryProvider } from './contexts/CategoryContext';
 import { ThemeProvider } from './contexts/ThemeContext';
@@ -9,8 +9,6 @@ import TaskList from './components/TaskList';
 import CategoryManager from './components/CategoryManager';
 
 function App() {
-  const [showCategories, setShowCategories] = useState(false);
-
   // Keyboard shortcuts
   useEffect(() => {
     const handleKeyPress = (e) => {
@@ -18,12 +16,6 @@ function App() {
       if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
         e.preventDefault();
         // This will be handled by the ThemeProvider
-      }
-      
-      // Ctrl/Cmd + C to toggle category manager
-      if ((e.ctrlKey || e.metaKey) && e.key === 'c') {
-        e.preventDefault();
-        setShowCategories(prev => !prev);
       }
     };
 
@@ -60,10 +52,6 @@ function App() {
                       <div className="flex justify-between">
                         <span>Toggle theme</span>
                         <kbd className="px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded">Ctrl+K</kbd>
-                      </div>
-                      <div className="flex justify-between">
-                        <span>Toggle categories</span>
-                        <kbd className="px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded">Ctrl+C</kbd>
                       </div>
                     </div>
                   </div>

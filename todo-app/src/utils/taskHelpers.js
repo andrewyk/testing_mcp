@@ -20,18 +20,20 @@ export const sortTasks = (tasks, sortBy = 'createdAt') => {
   const tasksCopy = [...tasks];
 
   switch (sortBy) {
-    case 'dueDate':
+    case 'dueDate': {
       return tasksCopy.sort((a, b) => {
         if (!a.dueDate) return 1;
         if (!b.dueDate) return -1;
         return new Date(a.dueDate) - new Date(b.dueDate);
       });
+    }
 
-    case 'priority':
+    case 'priority': {
       const priorityOrder = { high: 0, medium: 1, low: 2 };
       return tasksCopy.sort((a, b) => {
         return priorityOrder[a.priority] - priorityOrder[b.priority];
       });
+    }
 
     case 'createdAt':
     default:
