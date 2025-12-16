@@ -7,7 +7,7 @@
  * @returns {string} A unique identifier
  */
 export const generateId = () => {
-  return `${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
+  return `${Date.now()}-${Math.random().toString(36).slice(2, 11)}`;
 };
 
 /**
@@ -119,5 +119,9 @@ export const getPriorityColors = (priority) => {
  */
 export const isOverdue = (dueDate, completed) => {
   if (!dueDate || completed) return false;
-  return new Date(dueDate) < new Date();
+  const now = new Date();
+  now.setHours(0, 0, 0, 0); // Reset to start of day for fair comparison
+  const due = new Date(dueDate);
+  due.setHours(0, 0, 0, 0);
+  return due < now;
 };
