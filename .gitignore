@@ -1,0 +1,4 @@
+# Todo App
+todo-app/node_modules/
+todo-app/dist/
+todo-app/.vite/
