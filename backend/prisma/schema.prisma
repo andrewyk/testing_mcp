@@ -1,0 +1,105 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(uuid())
+  email     String   @unique
+  password  String
+  name      String?
+  settings  Json?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  
+  todos      Todo[]
+  categories Category[]
+  tags       Tag[]
+  
+  @@index([email])
+}
+
+model Todo {
+  id          String    @id @default(uuid())
+  userId      String
+  title       String
+  description String?
+  status      String    @default("active") // active, completed, archived
+  priority    String    @default("medium") // low, medium, high, urgent
+  dueDate     DateTime?
+  notes       String?
+  recurrence  String?   // daily, weekly, monthly, custom
+  order       Int       @default(0)
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  completedAt DateTime?
+  
+  user       User       @relation(fields: [userId], references: [id], onDelete: Cascade)
+  category   Category?  @relation(fields: [categoryId], references: [id], onDelete: SetNull)
+  categoryId String?
+  tags       TodoTag[]
+  subtasks   Subtask[]
+  
+  @@index([userId])
+  @@index([status])
+  @@index([priority])
+  @@index([dueDate])
+}
+
+model Category {
+  id        String   @id @default(uuid())
+  userId    String
+  name      String
+  color     String?
+  createdAt DateTime @default(now())
+  
+  user  User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+  todos Todo[]
+  
+  @@unique([userId, name])
+  @@index([userId])
+}
+
+model Tag {
+  id        String    @id @default(uuid())
+  userId    String
+  name      String
+  color     String?
+  createdAt DateTime  @default(now())
+  
+  user  User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  todos TodoTag[]
+  
+  @@unique([userId, name])
+  @@index([userId])
+}
+
+model TodoTag {
+  todoId String
+  tagId  String
+  
+  todo Todo @relation(fields: [todoId], references: [id], onDelete: Cascade)
+  tag  Tag  @relation(fields: [tagId], references: [id], onDelete: Cascade)
+  
+  @@id([todoId, tagId])
+  @@index([todoId])
+  @@index([tagId])
+}
+
+model Subtask {
+  id        String   @id @default(uuid())
+  todoId    String
+  title     String
+  status    String   @default("active") // active, completed
+  order     Int      @default(0)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  
+  todo Todo @relation(fields: [todoId], references: [id], onDelete: Cascade)
+  
+  @@index([todoId])
+}
