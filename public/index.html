@@ -1,0 +1,1207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comprehensive Todo Application</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .app-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      min-height: calc(100vh - 40px);
+    }
+
+    .app-header {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 24px 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .app-title {
+      font-size: 28px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .header-stats {
+      display: flex;
+      gap: 24px;
+      font-size: 14px;
+    }
+
+    .stat-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .stat-value {
+      font-size: 24px;
+      font-weight: 700;
+    }
+
+    .stat-label {
+      opacity: 0.9;
+      font-size: 12px;
+    }
+
+    .app-content {
+      display: flex;
+      flex: 1;
+      overflow: hidden;
+    }
+
+    .sidebar {
+      width: 280px;
+      background: #f8f9fa;
+      border-right: 1px solid #e9ecef;
+      padding: 24px;
+      overflow-y: auto;
+    }
+
+    .sidebar-section {
+      margin-bottom: 32px;
+    }
+
+    .sidebar-title {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #6c757d;
+      margin-bottom: 12px;
+      letter-spacing: 0.5px;
+    }
+
+    .project-list {
+      list-style: none;
+    }
+
+    .project-item {
+      padding: 10px 12px;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: background 0.2s;
+    }
+
+    .project-item:hover {
+      background: #e9ecef;
+    }
+
+    .project-item.active {
+      background: #667eea;
+      color: white;
+    }
+
+    .project-icon {
+      font-size: 16px;
+    }
+
+    .project-name {
+      flex: 1;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .task-count {
+      font-size: 12px;
+      background: rgba(0, 0, 0, 0.1);
+      padding: 2px 8px;
+      border-radius: 12px;
+    }
+
+    .main-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .content-header {
+      padding: 24px 32px;
+      border-bottom: 1px solid #e9ecef;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .content-title {
+      font-size: 24px;
+      font-weight: 700;
+      color: #212529;
+    }
+
+    .header-actions {
+      display: flex;
+      gap: 12px;
+    }
+
+    .btn {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-primary {
+      background: #667eea;
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: #5568d3;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+    }
+
+    .btn-secondary {
+      background: #e9ecef;
+      color: #495057;
+    }
+
+    .btn-secondary:hover {
+      background: #dee2e6;
+    }
+
+    .toolbar {
+      padding: 16px 32px;
+      border-bottom: 1px solid #e9ecef;
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .search-box {
+      flex: 1;
+      max-width: 400px;
+      position: relative;
+    }
+
+    .search-input {
+      width: 100%;
+      padding: 10px 16px 10px 40px;
+      border: 1px solid #dee2e6;
+      border-radius: 8px;
+      font-size: 14px;
+      transition: border-color 0.2s;
+    }
+
+    .search-input:focus {
+      outline: none;
+      border-color: #667eea;
+      box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+    }
+
+    .search-icon {
+      position: absolute;
+      left: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #6c757d;
+    }
+
+    .filter-group {
+      display: flex;
+      gap: 8px;
+    }
+
+    .filter-btn {
+      padding: 8px 16px;
+      border: 1px solid #dee2e6;
+      background: white;
+      border-radius: 8px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .filter-btn:hover {
+      border-color: #667eea;
+      color: #667eea;
+    }
+
+    .filter-btn.active {
+      background: #667eea;
+      color: white;
+      border-color: #667eea;
+    }
+
+    .task-list-container {
+      flex: 1;
+      overflow-y: auto;
+      padding: 24px 32px;
+    }
+
+    .task-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .task-item {
+      background: white;
+      border: 1px solid #e9ecef;
+      border-radius: 12px;
+      padding: 16px;
+      transition: all 0.2s;
+      cursor: pointer;
+    }
+
+    .task-item:hover {
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transform: translateY(-2px);
+    }
+
+    .task-item.completed {
+      opacity: 0.7;
+    }
+
+    .task-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 8px;
+    }
+
+    .task-checkbox {
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+    }
+
+    .task-title {
+      flex: 1;
+      font-size: 16px;
+      font-weight: 600;
+      color: #212529;
+    }
+
+    .task-title.completed {
+      text-decoration: line-through;
+      color: #6c757d;
+    }
+
+    .priority-badge {
+      padding: 4px 12px;
+      border-radius: 12px;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .priority-high {
+      background: #fee;
+      color: #dc3545;
+    }
+
+    .priority-medium {
+      background: #fff3cd;
+      color: #fd7e14;
+    }
+
+    .priority-low {
+      background: #d1ecf1;
+      color: #0dcaf0;
+    }
+
+    .priority-none {
+      background: #e9ecef;
+      color: #6c757d;
+    }
+
+    .task-meta {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      font-size: 13px;
+      color: #6c757d;
+      margin-left: 32px;
+    }
+
+    .task-tags {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    .tag {
+      padding: 3px 10px;
+      background: #f8f9fa;
+      border-radius: 12px;
+      font-size: 12px;
+      color: #495057;
+    }
+
+    .due-date {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .due-date.overdue {
+      color: #dc3545;
+      font-weight: 600;
+    }
+
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1000;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .modal-overlay.active {
+      display: flex;
+    }
+
+    .modal {
+      background: white;
+      border-radius: 16px;
+      width: 90%;
+      max-width: 600px;
+      max-height: 90vh;
+      overflow-y: auto;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    }
+
+    .modal-header {
+      padding: 24px;
+      border-bottom: 1px solid #e9ecef;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .modal-title {
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    .close-btn {
+      background: none;
+      border: none;
+      font-size: 24px;
+      cursor: pointer;
+      color: #6c757d;
+      padding: 0;
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+      transition: background 0.2s;
+    }
+
+    .close-btn:hover {
+      background: #f8f9fa;
+    }
+
+    .modal-body {
+      padding: 24px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+      font-size: 14px;
+      color: #495057;
+    }
+
+    .form-input,
+    .form-textarea,
+    .form-select {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1px solid #dee2e6;
+      border-radius: 8px;
+      font-size: 14px;
+      font-family: inherit;
+      transition: border-color 0.2s;
+    }
+
+    .form-input:focus,
+    .form-textarea:focus,
+    .form-select:focus {
+      outline: none;
+      border-color: #667eea;
+      box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+    }
+
+    .form-textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    .modal-footer {
+      padding: 24px;
+      border-top: 1px solid #e9ecef;
+      display: flex;
+      gap: 12px;
+      justify-content: flex-end;
+    }
+
+    .empty-state {
+      text-align: center;
+      padding: 64px 32px;
+      color: #6c757d;
+    }
+
+    .empty-state-icon {
+      font-size: 64px;
+      margin-bottom: 16px;
+    }
+
+    .empty-state-title {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: #495057;
+    }
+
+    .empty-state-text {
+      font-size: 14px;
+    }
+
+    .loading {
+      text-align: center;
+      padding: 32px;
+      color: #6c757d;
+    }
+
+    .error {
+      background: #f8d7da;
+      color: #721c24;
+      padding: 12px 16px;
+      border-radius: 8px;
+      margin-bottom: 16px;
+      border: 1px solid #f5c6cb;
+    }
+
+    @media (max-width: 768px) {
+      .app-content {
+        flex-direction: column;
+      }
+
+      .sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #e9ecef;
+      }
+
+      .header-stats {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script type="module">
+    // Configuration
+    const API_URL = 'http://localhost:3001/api';
+
+    // State management
+    let state = {
+      tasks: [],
+      projects: [],
+      users: [],
+      stats: {},
+      currentProject: null,
+      currentFilter: 'all',
+      searchQuery: '',
+      loading: true,
+      error: null,
+    };
+
+    // API calls
+    const api = {
+      async fetchTasks(params = {}) {
+        const queryString = new URLSearchParams(params).toString();
+        const url = `${API_URL}/tasks${queryString ? '?' + queryString : ''}`;
+        const response = await fetch(url);
+        if (!response.ok) throw new Error('Failed to fetch tasks');
+        return response.json();
+      },
+
+      async createTask(taskData) {
+        const response = await fetch(`${API_URL}/tasks`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(taskData),
+        });
+        if (!response.ok) throw new Error('Failed to create task');
+        return response.json();
+      },
+
+      async updateTask(id, updates) {
+        const response = await fetch(`${API_URL}/tasks/${id}`, {
+          method: 'PUT',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(updates),
+        });
+        if (!response.ok) throw new Error('Failed to update task');
+        return response.json();
+      },
+
+      async deleteTask(id) {
+        const response = await fetch(`${API_URL}/tasks/${id}`, {
+          method: 'DELETE',
+        });
+        if (!response.ok) throw new Error('Failed to delete task');
+        return response.json();
+      },
+
+      async fetchProjects() {
+        const response = await fetch(`${API_URL}/projects`);
+        if (!response.ok) throw new Error('Failed to fetch projects');
+        return response.json();
+      },
+
+      async createProject(projectData) {
+        const response = await fetch(`${API_URL}/projects`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(projectData),
+        });
+        if (!response.ok) throw new Error('Failed to create project');
+        return response.json();
+      },
+
+      async fetchStats() {
+        const response = await fetch(`${API_URL}/dashboard/stats`);
+        if (!response.ok) throw new Error('Failed to fetch stats');
+        return response.json();
+      },
+    };
+
+    // Render functions
+    function render() {
+      const root = document.getElementById('root');
+      root.innerHTML = `
+        <div class="app-container">
+          ${renderHeader()}
+          <div class="app-content">
+            ${renderSidebar()}
+            ${renderMainContent()}
+          </div>
+        </div>
+        ${renderModal()}
+      `;
+
+      attachEventListeners();
+    }
+
+    function renderHeader() {
+      return `
+        <div class="app-header">
+          <div class="app-title">
+            <span>📝</span>
+            <span>Comprehensive Todo App</span>
+          </div>
+          <div class="header-stats">
+            <div class="stat-item">
+              <div class="stat-value">${state.stats.totalTasks || 0}</div>
+              <div class="stat-label">Total Tasks</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value">${state.stats.completedTasks || 0}</div>
+              <div class="stat-label">Completed</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value">${state.stats.inProgressTasks || 0}</div>
+              <div class="stat-label">In Progress</div>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    function renderSidebar() {
+      return `
+        <div class="sidebar">
+          <div class="sidebar-section">
+            <div class="sidebar-title">Views</div>
+            <ul class="project-list">
+              <li class="project-item ${state.currentProject === null && state.currentFilter === 'all' ? 'active' : ''}" data-filter="all">
+                <span class="project-icon">📋</span>
+                <span class="project-name">All Tasks</span>
+                <span class="task-count">${state.tasks.length}</span>
+              </li>
+              <li class="project-item ${state.currentFilter === 'today' ? 'active' : ''}" data-filter="today">
+                <span class="project-icon">📅</span>
+                <span class="project-name">Today</span>
+                <span class="task-count">${state.stats.tasksDueToday || 0}</span>
+              </li>
+              <li class="project-item ${state.currentFilter === 'high-priority' ? 'active' : ''}" data-filter="high-priority">
+                <span class="project-icon">🔴</span>
+                <span class="project-name">High Priority</span>
+                <span class="task-count">${state.stats.highPriorityTasks || 0}</span>
+              </li>
+            </ul>
+          </div>
+          <div class="sidebar-section">
+            <div class="sidebar-title">Projects</div>
+            <ul class="project-list">
+              ${state.projects.map(project => `
+                <li class="project-item ${state.currentProject === project.id ? 'active' : ''}" data-project="${project.id}">
+                  <span class="project-icon">${project.icon}</span>
+                  <span class="project-name">${project.name}</span>
+                  <span class="task-count">${state.tasks.filter(t => t.projectId === project.id).length}</span>
+                </li>
+              `).join('')}
+            </ul>
+            <button class="btn btn-secondary" style="width: 100%; margin-top: 12px;" onclick="openCreateProjectModal()">
+              + New Project
+            </button>
+          </div>
+        </div>
+      `;
+    }
+
+    function renderMainContent() {
+      if (state.loading) {
+        return `
+          <div class="main-content">
+            <div class="loading">Loading...</div>
+          </div>
+        `;
+      }
+
+      const filteredTasks = getFilteredTasks();
+
+      return `
+        <div class="main-content">
+          <div class="content-header">
+            <div class="content-title">${getContentTitle()}</div>
+            <div class="header-actions">
+              <button class="btn btn-primary" onclick="openCreateTaskModal()">
+                <span>+</span>
+                <span>New Task</span>
+              </button>
+            </div>
+          </div>
+          <div class="toolbar">
+            <div class="search-box">
+              <span class="search-icon">🔍</span>
+              <input 
+                type="text" 
+                class="search-input" 
+                placeholder="Search tasks..." 
+                value="${state.searchQuery}"
+                oninput="handleSearch(event)"
+              >
+            </div>
+            <div class="filter-group">
+              <button class="filter-btn ${state.currentFilter === 'all' ? 'active' : ''}" onclick="setStatusFilter('all')">All</button>
+              <button class="filter-btn ${state.currentFilter === 'not_started' ? 'active' : ''}" onclick="setStatusFilter('not_started')">Not Started</button>
+              <button class="filter-btn ${state.currentFilter === 'in_progress' ? 'active' : ''}" onclick="setStatusFilter('in_progress')">In Progress</button>
+              <button class="filter-btn ${state.currentFilter === 'completed' ? 'active' : ''}" onclick="setStatusFilter('completed')">Completed</button>
+            </div>
+          </div>
+          <div class="task-list-container">
+            ${filteredTasks.length === 0 ? renderEmptyState() : renderTaskList(filteredTasks)}
+          </div>
+        </div>
+      `;
+    }
+
+    function getContentTitle() {
+      if (state.currentProject) {
+        const project = state.projects.find(p => p.id === state.currentProject);
+        return project ? `${project.icon} ${project.name}` : 'Tasks';
+      }
+      if (state.currentFilter === 'today') return '📅 Today';
+      if (state.currentFilter === 'high-priority') return '🔴 High Priority';
+      return '📋 All Tasks';
+    }
+
+    function getFilteredTasks() {
+      let tasks = state.tasks;
+
+      // Filter by project
+      if (state.currentProject) {
+        tasks = tasks.filter(t => t.projectId === state.currentProject);
+      }
+
+      // Filter by status
+      if (state.currentFilter === 'not_started') {
+        tasks = tasks.filter(t => t.status === 'not_started');
+      } else if (state.currentFilter === 'in_progress') {
+        tasks = tasks.filter(t => t.status === 'in_progress');
+      } else if (state.currentFilter === 'completed') {
+        tasks = tasks.filter(t => t.status === 'completed');
+      } else if (state.currentFilter === 'today') {
+        const today = new Date();
+        today.setHours(0, 0, 0, 0);
+        tasks = tasks.filter(t => {
+          if (!t.dueDate) return false;
+          const dueDate = new Date(t.dueDate);
+          dueDate.setHours(0, 0, 0, 0);
+          return dueDate.getTime() === today.getTime();
+        });
+      } else if (state.currentFilter === 'high-priority') {
+        tasks = tasks.filter(t => t.priority === 'high' && t.status !== 'completed');
+      }
+
+      // Filter by search
+      if (state.searchQuery) {
+        const query = state.searchQuery.toLowerCase();
+        tasks = tasks.filter(t => 
+          t.title.toLowerCase().includes(query) ||
+          (t.description && t.description.toLowerCase().includes(query))
+        );
+      }
+
+      return tasks;
+    }
+
+    function renderTaskList(tasks) {
+      return `
+        <ul class="task-list">
+          ${tasks.map(task => renderTaskItem(task)).join('')}
+        </ul>
+      `;
+    }
+
+    function renderTaskItem(task) {
+      const isCompleted = task.status === 'completed';
+      const isOverdue = task.dueDate && new Date(task.dueDate) < new Date() && !isCompleted;
+
+      return `
+        <li class="task-item ${isCompleted ? 'completed' : ''}" data-task-id="${task.id}">
+          <div class="task-header">
+            <input 
+              type="checkbox" 
+              class="task-checkbox" 
+              ${isCompleted ? 'checked' : ''}
+              onchange="toggleTaskComplete('${task.id}')"
+            >
+            <div class="task-title ${isCompleted ? 'completed' : ''}" onclick="openEditTaskModal('${task.id}')">
+              ${task.title}
+            </div>
+            <span class="priority-badge priority-${task.priority}">${task.priority}</span>
+          </div>
+          <div class="task-meta">
+            ${task.tags && task.tags.length > 0 ? `
+              <div class="task-tags">
+                ${task.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
+              </div>
+            ` : ''}
+            ${task.dueDate ? `
+              <div class="due-date ${isOverdue ? 'overdue' : ''}">
+                <span>📅</span>
+                <span>${formatDate(task.dueDate)}</span>
+              </div>
+            ` : ''}
+            ${task.assignee ? `<div>👤 ${task.assignee}</div>` : ''}
+          </div>
+        </li>
+      `;
+    }
+
+    function renderEmptyState() {
+      return `
+        <div class="empty-state">
+          <div class="empty-state-icon">📭</div>
+          <div class="empty-state-title">No tasks found</div>
+          <div class="empty-state-text">Create a new task to get started</div>
+        </div>
+      `;
+    }
+
+    function renderModal() {
+      return `
+        <div class="modal-overlay" id="modal-overlay" onclick="closeModal(event)">
+          <div class="modal" onclick="event.stopPropagation()">
+            <div class="modal-header">
+              <div class="modal-title" id="modal-title">New Task</div>
+              <button class="close-btn" onclick="closeModal()">×</button>
+            </div>
+            <div class="modal-body" id="modal-body">
+              <!-- Modal content will be inserted here -->
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    function renderTaskForm(task = null) {
+      const isEdit = task !== null;
+      return `
+        <form id="task-form" onsubmit="handleTaskSubmit(event, ${isEdit})">
+          ${isEdit ? `<input type="hidden" name="taskId" value="${task.id}">` : ''}
+          <div class="form-group">
+            <label class="form-label">Title *</label>
+            <input 
+              type="text" 
+              class="form-input" 
+              name="title" 
+              value="${task ? task.title : ''}" 
+              required 
+              maxlength="255"
+              placeholder="Enter task title"
+            >
+          </div>
+          <div class="form-group">
+            <label class="form-label">Description</label>
+            <textarea 
+              class="form-textarea" 
+              name="description" 
+              maxlength="10000"
+              placeholder="Enter task description (supports markdown)"
+            >${task ? task.description : ''}</textarea>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Priority</label>
+            <select class="form-select" name="priority">
+              <option value="none" ${task && task.priority === 'none' ? 'selected' : ''}>No Priority</option>
+              <option value="low" ${task && task.priority === 'low' ? 'selected' : ''}>Low</option>
+              <option value="medium" ${task && task.priority === 'medium' ? 'selected' : ''}>Medium</option>
+              <option value="high" ${task && task.priority === 'high' ? 'selected' : ''}>High</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Status</label>
+            <select class="form-select" name="status">
+              <option value="not_started" ${task && task.status === 'not_started' ? 'selected' : ''}>Not Started</option>
+              <option value="in_progress" ${task && task.status === 'in_progress' ? 'selected' : ''}>In Progress</option>
+              <option value="waiting" ${task && task.status === 'waiting' ? 'selected' : ''}>Waiting</option>
+              <option value="blocked" ${task && task.status === 'blocked' ? 'selected' : ''}>Blocked</option>
+              <option value="completed" ${task && task.status === 'completed' ? 'selected' : ''}>Completed</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Project</label>
+            <select class="form-select" name="projectId">
+              <option value="">No Project</option>
+              ${state.projects.map(p => `
+                <option value="${p.id}" ${task && task.projectId === p.id ? 'selected' : ''}>${p.icon} ${p.name}</option>
+              `).join('')}
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Due Date</label>
+            <input 
+              type="datetime-local" 
+              class="form-input" 
+              name="dueDate" 
+              value="${task && task.dueDate ? new Date(task.dueDate).toISOString().slice(0, 16) : ''}"
+            >
+          </div>
+          <div class="form-group">
+            <label class="form-label">Tags (comma-separated)</label>
+            <input 
+              type="text" 
+              class="form-input" 
+              name="tags" 
+              value="${task && task.tags ? task.tags.join(', ') : ''}"
+              placeholder="e.g., urgent, review, personal"
+            >
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" onclick="closeModal()">Cancel</button>
+            ${isEdit ? `
+              <button type="button" class="btn" style="background: #dc3545; color: white;" onclick="handleDeleteTask('${task.id}')">Delete</button>
+            ` : ''}
+            <button type="submit" class="btn btn-primary">${isEdit ? 'Update' : 'Create'} Task</button>
+          </div>
+        </form>
+      `;
+    }
+
+    function renderProjectForm() {
+      return `
+        <form id="project-form" onsubmit="handleProjectSubmit(event)">
+          <div class="form-group">
+            <label class="form-label">Project Name *</label>
+            <input 
+              type="text" 
+              class="form-input" 
+              name="name" 
+              required 
+              placeholder="Enter project name"
+            >
+          </div>
+          <div class="form-group">
+            <label class="form-label">Description</label>
+            <textarea 
+              class="form-textarea" 
+              name="description"
+              placeholder="Enter project description"
+            ></textarea>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Color</label>
+            <input 
+              type="color" 
+              class="form-input" 
+              name="color" 
+              value="#6366F1"
+            >
+          </div>
+          <div class="form-group">
+            <label class="form-label">Icon (emoji)</label>
+            <input 
+              type="text" 
+              class="form-input" 
+              name="icon" 
+              value="📁"
+              maxlength="2"
+            >
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" onclick="closeModal()">Cancel</button>
+            <button type="submit" class="btn btn-primary">Create Project</button>
+          </div>
+        </form>
+      `;
+    }
+
+    // Event handlers
+    function attachEventListeners() {
+      // Project selection
+      document.querySelectorAll('[data-project]').forEach(el => {
+        el.addEventListener('click', () => {
+          state.currentProject = el.dataset.project;
+          state.currentFilter = 'all';
+          render();
+        });
+      });
+
+      // Filter selection
+      document.querySelectorAll('[data-filter]').forEach(el => {
+        el.addEventListener('click', () => {
+          state.currentProject = null;
+          state.currentFilter = el.dataset.filter;
+          render();
+        });
+      });
+    }
+
+    window.handleSearch = (event) => {
+      state.searchQuery = event.target.value;
+      render();
+    };
+
+    window.setStatusFilter = (filter) => {
+      state.currentFilter = filter;
+      render();
+    };
+
+    window.toggleTaskComplete = async (taskId) => {
+      try {
+        const task = state.tasks.find(t => t.id === taskId);
+        const newStatus = task.status === 'completed' ? 'not_started' : 'completed';
+        await api.updateTask(taskId, { status: newStatus });
+        await loadData();
+      } catch (error) {
+        alert('Failed to update task: ' + error.message);
+      }
+    };
+
+    window.openCreateTaskModal = () => {
+      document.getElementById('modal-title').textContent = 'New Task';
+      document.getElementById('modal-body').innerHTML = renderTaskForm();
+      document.getElementById('modal-overlay').classList.add('active');
+    };
+
+    window.openEditTaskModal = (taskId) => {
+      const task = state.tasks.find(t => t.id === taskId);
+      if (task) {
+        document.getElementById('modal-title').textContent = 'Edit Task';
+        document.getElementById('modal-body').innerHTML = renderTaskForm(task);
+        document.getElementById('modal-overlay').classList.add('active');
+      }
+    };
+
+    window.openCreateProjectModal = () => {
+      document.getElementById('modal-title').textContent = 'New Project';
+      document.getElementById('modal-body').innerHTML = renderProjectForm();
+      document.getElementById('modal-overlay').classList.add('active');
+    };
+
+    window.closeModal = (event) => {
+      if (!event || event.target.id === 'modal-overlay') {
+        document.getElementById('modal-overlay').classList.remove('active');
+      }
+    };
+
+    window.handleTaskSubmit = async (event, isEdit) => {
+      event.preventDefault();
+      const form = event.target;
+      const formData = new FormData(form);
+      
+      const taskData = {
+        title: formData.get('title'),
+        description: formData.get('description'),
+        priority: formData.get('priority'),
+        status: formData.get('status'),
+        projectId: formData.get('projectId') || null,
+        dueDate: formData.get('dueDate') || null,
+        tags: formData.get('tags') ? formData.get('tags').split(',').map(t => t.trim()).filter(t => t) : [],
+      };
+
+      try {
+        if (isEdit) {
+          const taskId = formData.get('taskId');
+          if (taskId) {
+            await api.updateTask(taskId, taskData);
+          }
+        } else {
+          await api.createTask(taskData);
+        }
+        closeModal();
+        await loadData();
+      } catch (error) {
+        alert('Failed to save task: ' + error.message);
+      }
+    };
+
+    window.handleProjectSubmit = async (event) => {
+      event.preventDefault();
+      const form = event.target;
+      const formData = new FormData(form);
+      
+      const projectData = {
+        name: formData.get('name'),
+        description: formData.get('description'),
+        color: formData.get('color'),
+        icon: formData.get('icon'),
+      };
+
+      try {
+        await api.createProject(projectData);
+        closeModal();
+        await loadData();
+      } catch (error) {
+        alert('Failed to create project: ' + error.message);
+      }
+    };
+
+    window.handleDeleteTask = async (taskId) => {
+      if (confirm('Are you sure you want to delete this task? It will be moved to trash.')) {
+        try {
+          await api.deleteTask(taskId);
+          closeModal();
+          await loadData();
+        } catch (error) {
+          alert('Failed to delete task: ' + error.message);
+        }
+      }
+    };
+
+    // Helper functions
+    function formatDate(dateString) {
+      const date = new Date(dateString);
+      const today = new Date();
+      today.setHours(0, 0, 0, 0);
+      const taskDate = new Date(date);
+      taskDate.setHours(0, 0, 0, 0);
+
+      if (taskDate.getTime() === today.getTime()) {
+        return 'Today';
+      }
+
+      const tomorrow = new Date(today);
+      tomorrow.setDate(tomorrow.getDate() + 1);
+      if (taskDate.getTime() === tomorrow.getTime()) {
+        return 'Tomorrow';
+      }
+
+      return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+    }
+
+    // Data loading
+    async function loadData() {
+      try {
+        state.loading = true;
+        render();
+
+        const [tasks, projects, stats] = await Promise.all([
+          api.fetchTasks(),
+          api.fetchProjects(),
+          api.fetchStats(),
+        ]);
+
+        state.tasks = tasks;
+        state.projects = projects;
+        state.stats = stats;
+        state.loading = false;
+        state.error = null;
+
+        render();
+      } catch (error) {
+        state.loading = false;
+        state.error = error.message;
+        console.error('Failed to load data:', error);
+        render();
+      }
+    }
+
+    // Initialize app
+    loadData();
+
+    // Keyboard shortcuts
+    document.addEventListener('keydown', (e) => {
+      // Ctrl/Cmd + K for search
+      if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+        e.preventDefault();
+        document.querySelector('.search-input')?.focus();
+      }
+      // Ctrl/Cmd + N for new task
+      if ((e.ctrlKey || e.metaKey) && e.key === 'n') {
+        e.preventDefault();
+        openCreateTaskModal();
+      }
+    });
+  </script>
+</body>
+</html>
