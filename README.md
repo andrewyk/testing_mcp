@@ -53,3 +53,19 @@ npx http-server -p 8000
 - **Clear completed**: Click "Clear Completed" to remove all completed todos
 
 Your todos are automatically saved to localStorage and will persist across browser sessions.
+
+## 🍣 Sushi List
+
+A list of delicious sushi to try:
+
+- 🍣 Salmon Nigiri
+- 🍣 Tuna Nigiri
+- 🍣 Yellowtail Nigiri
+- 🌀 California Roll
+- 🌀 Spicy Tuna Roll
+- 🌀 Dragon Roll
+- 🌀 Rainbow Roll
+- 🌀 Philadelphia Roll
+- 🦐 Shrimp Tempura Roll
+- 🐟 Sashimi (Assorted)
+- 🥢 Miso Soup (bonus!)
