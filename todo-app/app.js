@@ -38,12 +38,17 @@ filterBtns.forEach(btn => {
 clearCompletedBtn.addEventListener('click', clearCompleted);
 
 /**
- * Add a new todo item
+ * Add a new todo item with enhanced feedback
  */
 function addTodo() {
     const text = todoInput.value.trim();
     
     if (text === '') {
+        // Add shake animation for empty input
+        todoInput.style.animation = 'shake 0.5s ease-in-out';
+        setTimeout(() => {
+            todoInput.style.animation = '';
+        }, 500);
         return;
     }
 
@@ -55,6 +60,12 @@ function addTodo() {
 
     todos.push(todo);
     todoInput.value = '';
+    
+    // Add button animation feedback
+    addBtn.style.transform = 'scale(0.95)';
+    setTimeout(() => {
+        addBtn.style.transform = '';
+    }, 150);
     
     saveTodos();
     renderTodos();
@@ -114,6 +125,8 @@ function renderTodos() {
 function createTodoElement(todo) {
     const li = document.createElement('li');
     li.className = `todo-item ${todo.completed ? 'completed' : ''}`;
+    li.style.opacity = '0';
+    li.style.transform = 'translateY(20px)';
     
     // Checkbox
     const checkbox = document.createElement('input');
@@ -130,14 +143,35 @@ function createTodoElement(todo) {
     // Delete button
     const deleteBtn = document.createElement('button');
     deleteBtn.className = 'delete-btn';
-    deleteBtn.textContent = 'Delete';
-    deleteBtn.addEventListener('click', () => deleteTodo(todo.id));
+    deleteBtn.innerHTML = '🗑️ Delete';
+    deleteBtn.addEventListener('click', () => deleteTodoWithAnimation(todo.id, li));
     
     li.appendChild(checkbox);
     li.appendChild(text);
     li.appendChild(deleteBtn);
     
+    // Animate in
+    requestAnimationFrame(() => {
+        li.style.transition = 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)';
+        li.style.opacity = '1';
+        li.style.transform = 'translateY(0)';
+    });
+    
     return li;
+}
+
+/**
+ * Delete a todo item with animation
+ */
+function deleteTodoWithAnimation(id, element) {
+    // Animate out
+    element.style.transition = 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)';
+    element.style.opacity = '0';
+    element.style.transform = 'translateX(100px)';
+    
+    setTimeout(() => {
+        deleteTodo(id);
+    }, 300);
 }
 
 /**

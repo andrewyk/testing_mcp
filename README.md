@@ -1,6 +1,30 @@
 # testing_mcp
 Testing repository for MCP
 
+## 🎭 A Poem for Coders
+
+```
+In the realm of ones and zeros bright,
+Where algorithms dance through the night,
+Code flows like rivers, clean and true,
+Creating worlds both old and new.
+
+Functions call and variables store,
+While loops repeat forevermore,
+Git commits tell our coding tale,
+Through every bug and every fail.
+
+In this repository we test and learn,
+Where curiosity makes fires burn,
+MCP connections bridge the gap,
+Between our dreams and this code map.
+
+So here's to testing, here's to code,
+To every merge and episode,
+May your builds always pass with green,
+And bugs be quickly found and cleaned.
+```
+
 📐
 🔴
 
