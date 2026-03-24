@@ -3,38 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Todo App</title>
+    <title>✨ Modern Todo App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Todo App</h1>
-        
-        <!-- Input section -->
-        <div class="input-section">
-            <input 
-                type="text" 
-                id="todo-input" 
-                placeholder="What needs to be done?" 
-                autocomplete="off"
-            >
-            <button id="add-btn">Add</button>
-        </div>
+    <div class="app-wrapper">
+        <div class="container">
+            <header class="app-header">
+                <h1>✨ Todo App</h1>
+                <p class="subtitle">Organize your tasks with style</p>
+            </header>
+            
+            <!-- Input section -->
+            <div class="input-section">
+                <div class="input-wrapper">
+                    <input 
+                        type="text" 
+                        id="todo-input" 
+                        placeholder="What would you like to accomplish today?" 
+                        autocomplete="off"
+                    >
+                    <button id="add-btn">
+                        <span class="btn-text">Add Task</span>
+                        <span class="btn-icon">+</span>
+                    </button>
+                </div>
+            </div>
 
-        <!-- Filter buttons -->
-        <div class="filters">
-            <button class="filter-btn active" data-filter="all">All</button>
-            <button class="filter-btn" data-filter="active">Active</button>
-            <button class="filter-btn" data-filter="completed">Completed</button>
-        </div>
+            <!-- Filter buttons -->
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">
+                    <span class="filter-icon">📋</span>All
+                </button>
+                <button class="filter-btn" data-filter="active">
+                    <span class="filter-icon">⚡</span>Active
+                </button>
+                <button class="filter-btn" data-filter="completed">
+                    <span class="filter-icon">✅</span>Completed
+                </button>
+            </div>
 
-        <!-- Todo list -->
-        <ul id="todo-list" class="todo-list"></ul>
+            <!-- Todo list -->
+            <div class="todo-section">
+                <ul id="todo-list" class="todo-list"></ul>
+            </div>
 
-        <!-- Footer with stats and actions -->
-        <div class="footer">
-            <span id="todo-count">0 items left</span>
-            <button id="clear-completed">Clear Completed</button>
+            <!-- Footer with stats and actions -->
+            <footer class="footer">
+                <div class="stats">
+                    <span id="todo-count" class="count-badge">0 items left</span>
+                </div>
+                <button id="clear-completed" class="clear-btn">
+                    <span class="clear-icon">🗑️</span>
+                    Clear Completed
+                </button>
+            </footer>
         </div>
     </div>
 
