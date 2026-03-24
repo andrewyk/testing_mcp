@@ -3,22 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>✨ Modern Todo App</title>
+    <title>✨ Advanced Todo App</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body data-theme="light">
+    <!-- Floating particles background -->
+    <div class="particles-container"></div>
+    
+    <!-- Confetti container -->
+    <div id="confetti-container"></div>
+    
     <div class="app-wrapper">
         <div class="container">
             <header class="app-header">
-                <h1>✨ Todo App</h1>
-                <p class="subtitle">Organize your tasks with style</p>
+                <div class="header-top">
+                    <div class="logo-section">
+                        <h1>✨ Advanced Todo</h1>
+                        <p class="subtitle">Master your productivity</p>
+                    </div>
+                    <div class="header-controls">
+                        <button id="theme-toggle" class="theme-toggle" title="Toggle Dark Mode">
+                            <span class="theme-icon">🌙</span>
+                        </button>
+                        <button id="settings-btn" class="settings-btn" title="Settings">
+                            <span>⚙️</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Progress bar -->
+                <div class="progress-section">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progress-fill"></div>
+                    </div>
+                    <div class="progress-stats">
+                        <span id="progress-text">0 of 0 completed</span>
+                        <span id="progress-percentage">0%</span>
+                    </div>
+                </div>
             </header>
             
-            <!-- Input section -->
+            <!-- Search and Input section -->
             <div class="input-section">
+                <div class="search-wrapper">
+                    <input 
+                        type="text" 
+                        id="search-input" 
+                        placeholder="🔍 Search tasks..." 
+                        autocomplete="off"
+                    >
+                    <button id="search-clear" class="search-clear">✕</button>
+                </div>
+                
                 <div class="input-wrapper">
                     <input 
                         type="text" 
@@ -26,6 +65,11 @@
                         placeholder="What would you like to accomplish today?" 
                         autocomplete="off"
                     >
+                    <select id="priority-select" class="priority-select">
+                        <option value="low">🟢 Low</option>
+                        <option value="medium">🟡 Medium</option>
+                        <option value="high">🔴 High</option>
+                    </select>
                     <button id="add-btn">
                         <span class="btn-text">Add Task</span>
                         <span class="btn-icon">+</span>
@@ -33,17 +77,47 @@
                 </div>
             </div>
 
-            <!-- Filter buttons -->
-            <div class="filters">
-                <button class="filter-btn active" data-filter="all">
-                    <span class="filter-icon">📋</span>All
-                </button>
-                <button class="filter-btn" data-filter="active">
-                    <span class="filter-icon">⚡</span>Active
-                </button>
-                <button class="filter-btn" data-filter="completed">
-                    <span class="filter-icon">✅</span>Completed
-                </button>
+            <!-- Filter and Sort controls -->
+            <div class="controls-section">
+                <div class="filters">
+                    <button class="filter-btn active" data-filter="all">
+                        <span class="filter-icon">📋</span>All
+                    </button>
+                    <button class="filter-btn" data-filter="active">
+                        <span class="filter-icon">⚡</span>Active
+                    </button>
+                    <button class="filter-btn" data-filter="completed">
+                        <span class="filter-icon">✅</span>Completed
+                    </button>
+                    <button class="filter-btn" data-filter="high">
+                        <span class="filter-icon">🔴</span>High Priority
+                    </button>
+                </div>
+                
+                <div class="sort-controls">
+                    <select id="sort-select" class="sort-select">
+                        <option value="newest">📅 Newest First</option>
+                        <option value="oldest">📅 Oldest First</option>
+                        <option value="priority">⭐ By Priority</option>
+                        <option value="alphabetical">🔤 Alphabetical</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Statistics panel -->
+            <div class="stats-panel">
+                <div class="stat-card">
+                    <div class="stat-number" id="total-tasks">0</div>
+                    <div class="stat-label">Total Tasks</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="completed-tasks">0</div>
+                    <div class="stat-label">Completed</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="productivity-score">0%</div>
+                    <div class="stat-label">Productivity</div>
+                </div>
             </div>
 
             <!-- Todo list -->
@@ -51,16 +125,54 @@
                 <ul id="todo-list" class="todo-list"></ul>
             </div>
 
-            <!-- Footer with stats and actions -->
+            <!-- Enhanced Footer -->
             <footer class="footer">
-                <div class="stats">
+                <div class="footer-stats">
                     <span id="todo-count" class="count-badge">0 items left</span>
+                    <div class="footer-actions">
+                        <button id="select-all" class="footer-btn" title="Select All">
+                            <span>☑️</span> Select All
+                        </button>
+                        <button id="export-data" class="footer-btn" title="Export Data">
+                            <span>📤</span> Export
+                        </button>
+                    </div>
                 </div>
                 <button id="clear-completed" class="clear-btn">
                     <span class="clear-icon">🗑️</span>
                     Clear Completed
                 </button>
             </footer>
+        </div>
+    </div>
+
+    <!-- Toast notifications -->
+    <div id="toast-container" class="toast-container"></div>
+    
+    <!-- Keyboard shortcuts help -->
+    <div class="shortcuts-help" id="shortcuts-help">
+        <h3>⌨️ Keyboard Shortcuts</h3>
+        <div class="shortcut-list">
+            <div class="shortcut-item">
+                <kbd>Ctrl + Enter</kbd>
+                <span>Add new task</span>
+            </div>
+            <div class="shortcut-item">
+                <kbd>Ctrl + /</kbd>
+                <span>Search tasks</span>
+            </div>
+            <div class="shortcut-item">
+                <kbd>Ctrl + D</kbd>
+                <span>Toggle dark mode</span>
+            </div>
+            <div class="shortcut-item">
+                <kbd>Ctrl + A</kbd>
+                <span>Select all tasks</span>
+            </div>
+            <div class="shortcut-item">
+                <kbd>Escape</kbd>
+                <span>Clear search</span>
+            </div>
         </div>
     </div>
 
