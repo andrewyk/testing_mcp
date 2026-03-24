@@ -1,3 +1,38 @@
+/* CSS Variables for theming */
+:root {
+    --bg-gradient-start: #667eea;
+    --bg-gradient-end: #764ba2;
+    --container-bg: #ffffff;
+    --text-primary: #333333;
+    --text-secondary: #666666;
+    --text-muted: #999999;
+    --border-color: #e0e0e0;
+    --item-hover-bg: #f5f5f5;
+    --accent-color: #667eea;
+    --accent-hover: #5568d3;
+    --delete-color: #ff6b6b;
+    --delete-hover: #ee5a52;
+    --input-bg: #ffffff;
+    --select-bg: #ffffff;
+}
+
+[data-theme="dark"] {
+    --bg-gradient-start: #1a1a2e;
+    --bg-gradient-end: #16213e;
+    --container-bg: #1e293b;
+    --text-primary: #e2e8f0;
+    --text-secondary: #94a3b8;
+    --text-muted: #64748b;
+    --border-color: #334155;
+    --item-hover-bg: #263045;
+    --accent-color: #818cf8;
+    --accent-hover: #6366f1;
+    --delete-color: #f87171;
+    --delete-hover: #ef4444;
+    --input-bg: #263045;
+    --select-bg: #263045;
+}
+
 /* General styles */
 * {
     margin: 0;
@@ -7,29 +42,57 @@
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, var(--bg-gradient-start) 0%, var(--bg-gradient-end) 100%);
     min-height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;
-    padding: 20px;
+    align-items: flex-start;
+    padding: 40px 20px;
+    transition: background 0.3s;
 }
 
 .container {
-    background: white;
+    background: var(--container-bg);
     border-radius: 10px;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
     width: 100%;
     max-width: 600px;
     padding: 30px;
+    transition: background 0.3s;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
 }
 
 h1 {
-    text-align: center;
-    color: #333;
-    margin-bottom: 30px;
+    color: var(--text-primary);
     font-size: 2.5em;
     font-weight: 300;
+    transition: color 0.3s;
+}
+
+#theme-toggle {
+    background: transparent;
+    border: 2px solid var(--border-color);
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+    color: var(--text-primary);
+}
+
+#theme-toggle:hover {
+    border-color: var(--accent-color);
+    background: var(--item-hover-bg);
 }
 
 /* Input section */
@@ -42,20 +105,42 @@ h1 {
 #todo-input {
     flex: 1;
     padding: 12px 15px;
-    border: 2px solid #e0e0e0;
+    border: 2px solid var(--border-color);
     border-radius: 5px;
     font-size: 16px;
-    transition: border-color 0.3s;
+    transition: border-color 0.3s, background 0.3s, color 0.3s;
+    background: var(--input-bg);
+    color: var(--text-primary);
+}
+
+#todo-input::placeholder {
+    color: var(--text-muted);
 }
 
 #todo-input:focus {
     outline: none;
-    border-color: #667eea;
+    border-color: var(--accent-color);
+}
+
+#priority-select {
+    padding: 12px 10px;
+    border: 2px solid var(--border-color);
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    background: var(--select-bg);
+    color: var(--text-primary);
+    transition: border-color 0.3s, background 0.3s, color 0.3s;
+}
+
+#priority-select:focus {
+    outline: none;
+    border-color: var(--accent-color);
 }
 
 #add-btn {
     padding: 12px 25px;
-    background: #667eea;
+    background: var(--accent-color);
     color: white;
     border: none;
     border-radius: 5px;
@@ -65,36 +150,38 @@ h1 {
 }
 
 #add-btn:hover {
-    background: #5568d3;
+    background: var(--accent-hover);
 }
 
 /* Filters */
 .filters {
     display: flex;
-    gap: 10px;
+    flex-wrap: wrap;
+    gap: 8px;
     margin-bottom: 20px;
     justify-content: center;
 }
 
 .filter-btn {
-    padding: 8px 20px;
+    padding: 6px 16px;
     background: transparent;
-    border: 2px solid #e0e0e0;
+    border: 2px solid var(--border-color);
     border-radius: 5px;
     cursor: pointer;
-    font-size: 14px;
+    font-size: 13px;
+    color: var(--text-secondary);
     transition: all 0.3s;
 }
 
 .filter-btn:hover {
-    border-color: #667eea;
-    color: #667eea;
+    border-color: var(--accent-color);
+    color: var(--accent-color);
 }
 
 .filter-btn.active {
-    background: #667eea;
+    background: var(--accent-color);
     color: white;
-    border-color: #667eea;
+    border-color: var(--accent-color);
 }
 
 /* Todo list */
@@ -106,46 +193,121 @@ h1 {
 .todo-item {
     display: flex;
     align-items: center;
-    padding: 15px;
-    border-bottom: 1px solid #e0e0e0;
+    padding: 14px 15px;
+    border-bottom: 1px solid var(--border-color);
     transition: background 0.2s;
+    gap: 12px;
 }
 
 .todo-item:hover {
-    background: #f5f5f5;
+    background: var(--item-hover-bg);
 }
 
 .todo-item.completed .todo-text {
     text-decoration: line-through;
-    color: #999;
+    color: var(--text-muted);
 }
 
 .todo-checkbox {
     width: 20px;
     height: 20px;
-    margin-right: 15px;
     cursor: pointer;
+    flex-shrink: 0;
+    accent-color: var(--accent-color);
+}
+
+.todo-content {
+    flex: 1;
+    min-width: 0;
 }
 
 .todo-text {
-    flex: 1;
+    display: block;
     font-size: 16px;
-    color: #333;
+    color: var(--text-primary);
+    word-break: break-word;
+    transition: color 0.3s;
+}
+
+.todo-meta {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-top: 4px;
+    flex-wrap: wrap;
+}
+
+.priority-badge {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.priority-badge.high {
+    background: #fee2e2;
+    color: #dc2626;
+}
+
+.priority-badge.medium {
+    background: #fef9c3;
+    color: #ca8a04;
+}
+
+.priority-badge.low {
+    background: #dcfce7;
+    color: #16a34a;
+}
+
+[data-theme="dark"] .priority-badge.high {
+    background: #450a0a;
+    color: #f87171;
+}
+
+[data-theme="dark"] .priority-badge.medium {
+    background: #422006;
+    color: #fbbf24;
+}
+
+[data-theme="dark"] .priority-badge.low {
+    background: #052e16;
+    color: #4ade80;
+}
+
+.todo-date {
+    font-size: 11px;
+    color: var(--text-muted);
 }
 
 .delete-btn {
-    padding: 5px 15px;
-    background: #ff6b6b;
+    padding: 5px 12px;
+    background: var(--delete-color);
     color: white;
     border: none;
     border-radius: 3px;
     cursor: pointer;
-    font-size: 14px;
+    font-size: 13px;
     transition: background 0.3s;
+    flex-shrink: 0;
 }
 
 .delete-btn:hover {
-    background: #ee5a52;
+    background: var(--delete-hover);
+}
+
+/* Priority border indicator */
+.todo-item[data-priority="high"] {
+    border-left: 4px solid #dc2626;
+}
+
+.todo-item[data-priority="medium"] {
+    border-left: 4px solid #ca8a04;
+}
+
+.todo-item[data-priority="low"] {
+    border-left: 4px solid #16a34a;
 }
 
 /* Footer */
@@ -154,19 +316,19 @@ h1 {
     justify-content: space-between;
     align-items: center;
     padding-top: 15px;
-    border-top: 1px solid #e0e0e0;
+    border-top: 1px solid var(--border-color);
 }
 
 #todo-count {
-    color: #666;
+    color: var(--text-secondary);
     font-size: 14px;
 }
 
 #clear-completed {
     padding: 8px 15px;
     background: transparent;
-    border: 1px solid #ff6b6b;
-    color: #ff6b6b;
+    border: 1px solid var(--delete-color);
+    color: var(--delete-color);
     border-radius: 3px;
     cursor: pointer;
     font-size: 14px;
@@ -174,7 +336,7 @@ h1 {
 }
 
 #clear-completed:hover {
-    background: #ff6b6b;
+    background: var(--delete-color);
     color: white;
 }
 
@@ -183,13 +345,18 @@ h1 {
     content: "No todos yet. Add one above!";
     display: block;
     text-align: center;
-    color: #999;
+    color: var(--text-muted);
     padding: 30px;
     font-style: italic;
 }
 
 /* Responsive */
 @media (max-width: 600px) {
+    body {
+        padding: 20px 10px;
+        align-items: flex-start;
+    }
+
     .container {
         padding: 20px;
     }
@@ -203,6 +370,10 @@ h1 {
     }
 
     #add-btn {
+        width: 100%;
+    }
+
+    #priority-select {
         width: 100%;
     }
 }

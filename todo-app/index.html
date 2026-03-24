@@ -6,9 +6,12 @@
     <title>Todo App</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body data-theme="light">
     <div class="container">
-        <h1>Todo App</h1>
+        <div class="header">
+            <h1>Todo App</h1>
+            <button id="theme-toggle" title="Toggle dark mode">🌙</button>
+        </div>
         
         <!-- Input section -->
         <div class="input-section">
@@ -18,6 +21,11 @@
                 placeholder="What needs to be done?" 
                 autocomplete="off"
             >
+            <select id="priority-select">
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+                <option value="low">Low</option>
+            </select>
             <button id="add-btn">Add</button>
         </div>
 
@@ -26,6 +34,9 @@
             <button class="filter-btn active" data-filter="all">All</button>
             <button class="filter-btn" data-filter="active">Active</button>
             <button class="filter-btn" data-filter="completed">Completed</button>
+            <button class="filter-btn" data-filter="high">🔴 High</button>
+            <button class="filter-btn" data-filter="medium">🟡 Medium</button>
+            <button class="filter-btn" data-filter="low">🟢 Low</button>
         </div>
 
         <!-- Todo list -->
