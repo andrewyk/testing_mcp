@@ -53,3 +53,27 @@ npx http-server -p 8000
 - **Clear completed**: Click "Clear Completed" to remove all completed todos
 
 Your todos are automatically saved to localStorage and will persist across browser sessions.
+
+---
+
+## 📖 Story: The Teacher Who Tamed the Chaos
+
+Sam had been teaching fifth grade for eleven years, and every September felt the same: twenty-six students, four field trips to schedule, a hundred permission slips to chase down, and a stack of lesson plans that somehow needed to exist by Friday.
+
+This September was different, though. A colleague had mentioned the Todo app during a staff meeting, almost as a throwaway comment. "It's just a webpage," she said. "Nothing fancy. But it keeps me sane."
+
+Sam was skeptical. A list in a browser tab? She had notebooks for that. Color-coded, tabbed, spiral-bound notebooks.
+
+Still, she opened `index.html` one quiet Tuesday evening at her kitchen table, coffee going cold beside her.
+
+She typed the first task: *Grade volcano reports – due Thursday.* Pressed Enter. There it was, sitting neatly at the top of the list. She typed a second, a third — permission slips, the science-supply order, a call to Marcus's parents, a reminder to laminate the new word-wall cards. Seven tasks in two minutes. No flipping to a new page, no hunting for the right pen.
+
+She closed the laptop and went to bed.
+
+Wednesday morning, coffee still hot, she opened the tab again. All seven tasks were waiting — exactly as she'd left them, pulled silently from localStorage without so much as a loading spinner. She checked off *Grade volcano reports* after lunch and watched it slide into the Completed filter with quiet satisfaction.
+
+By Friday afternoon the list was empty. Not because the work had disappeared, but because it was done. Sam leaned back in her chair, looked at the tidy little app, and typed one final task for next week: *Tell the staff-meeting crowd they were right.*
+
+She checked it off immediately.
+
+---
