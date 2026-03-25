@@ -53,3 +53,19 @@ npx http-server -p 8000
 - **Clear completed**: Click "Clear Completed" to remove all completed todos
 
 Your todos are automatically saved to localStorage and will persist across browser sessions.
+
+---
+
+## 📖 A Story: The Night Before the Deadline
+
+Maya was a graphic design student with a bad habit of leaving everything to the last minute. With just eighteen hours before her portfolio presentation, she opened her laptop, pulled up the Todo App, and typed her first task: *"Find all project files."*
+
+The list grew fast. Resize images. Export to PDF. Write the artist statement. Email the professor with questions. By the time she'd finished listing everything, the sheer volume was almost enough to send her back to bed.
+
+But then she clicked the first checkbox.
+
+Something about watching that task slide into the *Completed* column lit a small fire in her chest. She moved to the next one. Then the next. Around 2 a.m. she accidentally closed the browser tab — her heart sank — but when she reopened it, every single task was still there, faithfully waiting in localStorage. The app hadn't lost a thing.
+
+By 7 a.m., the *Active* column held only one item: *"Sleep for one hour."*
+
+She clicked "Clear Completed," watched the finished tasks vanish in a clean sweep, and smiled at the empty list. The presentation went beautifully. Maya still leaves things to the last minute — but now at least she has a system.
