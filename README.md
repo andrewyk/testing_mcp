@@ -53,3 +53,23 @@ npx http-server -p 8000
 - **Clear completed**: Click "Clear Completed" to remove all completed todos
 
 Your todos are automatically saved to localStorage and will persist across browser sessions.
+
+---
+
+## 📖 Story: The Launch That Almost Slipped Away
+
+It was 11 p.m. on a Thursday when Priya finally admitted she was overwhelmed.
+
+Her team's product launch was 36 hours away, and her mind was a blur of unfinished tasks — write the release notes, coordinate the social-media post, verify the staging environment, brief the support team, and a dozen other things she kept forgetting the moment a new Slack message arrived.
+
+A colleague had mentioned a simple Todo app earlier that week. Priya opened `index.html`, typed her first task — *"Write release notes"* — and pressed Enter. Something about seeing it captured in a neat little row made her breathe a little easier.
+
+One by one she typed the rest. Within five minutes she had a clean list of fourteen items staring back at her.
+
+She clicked the **Active** filter to hide everything else and focused. Task by task, checkbox by checkbox, the list shrank. Around midnight she accidentally closed the browser tab. Her stomach dropped — but when she reopened it the list was exactly as she'd left it, every item intact, thanks to localStorage.
+
+By 2 a.m. she had knocked out eight tasks. She clicked **Clear Completed**, and the finished items disappeared, leaving only the six that still needed her attention. The shorter list felt like a reward.
+
+Friday flew by. When the last task — *"Send launch announcement"* — got its checkbox ticked at 3:47 p.m., Priya leaned back in her chair and smiled. The launch shipped on time.
+
+Sometimes the simplest tools make all the difference.
