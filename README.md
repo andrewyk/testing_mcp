@@ -53,3 +53,41 @@ npx http-server -p 8000
 - **Clear completed**: Click "Clear Completed" to remove all completed todos
 
 Your todos are automatically saved to localStorage and will persist across browser sessions.
+
+---
+
+## 📖 Story: The Bug That Became a Feature
+
+It was 11:47 p.m. on a Thursday when Dani, a junior developer three months into her first job, stared at a blank screen and felt the familiar knot of dread tighten in her stomach.
+
+Her team's sprint review was at 9 a.m. Friday. She had five tasks left — bug fixes, a refactor, and one feature she'd been quietly avoiding all week. She'd written them on a sticky note, but the sticky note was gone, probably buried under the avalanche of coffee cups and printouts on her desk.
+
+She opened the Todo app on a whim. *Might as well*, she thought.
+
+One by one, she typed them in:
+
+- Fix null pointer in auth middleware
+- Refactor `userService.js`
+- Write unit tests for the cart module
+- Update API docs for `/orders` endpoint
+- Add loading spinner to checkout page
+
+Five tasks. Nine hours. She stared at the list and took a slow breath.
+
+She started with the null pointer — the one she'd been dreading most. At 12:30 a.m., she cracked it: a single missing check, two characters added. She clicked the checkbox. The item crossed itself out, satisfying as a door clicking shut.
+
+At 2:15 a.m., her laptop battery died.
+
+She grabbed her charger with a groan, plugged in, reopened the browser — and there was her list, exactly as she'd left it. The app had saved everything to localStorage. Two tasks checked off. Three to go.
+
+She switched to the **Active** filter so the completed tasks disappeared from view. No distractions. Just the work in front of her.
+
+By 6:00 a.m., the sun had started to grey the sky outside her window. All five checkboxes were filled. She clicked **Clear Completed**, and the list went clean and empty — like the end of something, or the beginning.
+
+She made coffee. She showered. She showed up to the sprint review with five minutes to spare.
+
+When her manager asked how she'd managed to close every ticket, Dani just smiled.
+
+"Good tools," she said. "And good coffee."
+
+---
