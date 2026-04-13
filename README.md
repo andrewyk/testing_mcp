@@ -74,7 +74,7 @@ He ran the staging deploy script, watched the terminal scroll green, and came ba
 
 Three minutes later the beta email was out. Another checkbox. Another item gone.
 
-At 11:58 Jordan's laptop fan whirred, the browser froze, and his stomach dropped — *the tab.* He had to force-quit Chrome and relaunch it. His hands were shaking slightly as he navigated back to the app.
+At 11:58 Jordan's laptop fan whirred, the browser froze, and his stomach dropped — *the tab.* He had to force-quit the browser and relaunch it. His hands were shaking slightly as he navigated back to the app.
 
 The list was exactly as he'd left it: two items completed, three still open. localStorage had saved everything.
 
