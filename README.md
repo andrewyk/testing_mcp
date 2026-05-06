@@ -53,3 +53,9 @@ npx http-server -p 8000
 - **Clear completed**: Click "Clear Completed" to remove all completed todos
 
 Your todos are automatically saved to localStorage and will persist across browser sessions.
+
+### Story
+
+- Alex starts a new sprint by listing tasks in the Todo App.
+- As work finishes, Alex marks items complete and filters between active and completed tasks during daily check-ins.
+- At the end of the day, Alex closes the browser and later returns to find every todo still available because the app saves progress with localStorage.
