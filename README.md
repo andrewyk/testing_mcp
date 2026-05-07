@@ -53,3 +53,25 @@ npx http-server -p 8000
 - **Clear completed**: Click "Clear Completed" to remove all completed todos
 
 Your todos are automatically saved to localStorage and will persist across browser sessions.
+
+## Cooking Recipe
+
+### Garlic Butter Pasta
+
+**Ingredients**
+
+- 8 oz spaghetti
+- 3 tablespoons butter
+- 3 cloves garlic, minced
+- 1/4 teaspoon salt
+- 1/4 teaspoon black pepper
+- 2 tablespoons grated Parmesan
+- 1 tablespoon chopped parsley
+
+**Instructions**
+
+1. Cook the spaghetti in salted boiling water until tender, then drain.
+2. Melt the butter in a pan over medium heat and cook the garlic for 30 seconds.
+3. Add the pasta, salt, and pepper, then toss until coated.
+4. Remove from heat and mix in the Parmesan and parsley.
+5. Serve warm.
