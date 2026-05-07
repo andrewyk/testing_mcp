@@ -53,3 +53,7 @@ npx http-server -p 8000
 - **Clear completed**: Click "Clear Completed" to remove all completed todos
 
 Your todos are automatically saved to localStorage and will persist across browser sessions.
+
+## Scary Story
+
+On a stormy night, a developer opened the Todo App to clear a few forgotten tasks. Each time a completed item vanished, a new one appeared with a message they never typed: "DON'T CLOSE THE TAB." The list kept growing, the screen dimmed, and the final unchecked task simply read, "LOOK BEHIND YOU."
